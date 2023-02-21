@@ -1,0 +1,9 @@
+img {
+  width: auto;
+}
+a img {
+  width: 200px;
+}
+agm-map {
+  height: 300px;
+}

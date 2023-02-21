@@ -1,0 +1,426 @@
+<div *ngIf="myMedicalService === 'SCREENING'">
+    <busy *ngIf="programsBusy && !hasError" [message]="'Loading patient care programs...'"></busy>
+    <div class="programs" *ngIf="enrolledProgrames.length > 0 && !hasError">
+      <div style="margin: 4px 0px; padding: 4px;" class="container-fluid alert alert-info">
+        Do you wish to enroll patient into another program?
+         <enrollment-shortcut class="pull-right" ></enrollment-shortcut>
+      </div>
+      <div class="program">
+        <ng-container *ngFor="let row of enrolledProgrames; ">
+          <div class="enrolled">
+            <div class="program-header-wrapper">
+              <h2 class="program-header">{{row.program.display}} (Enrolled on
+                {{row.dateEnrolledView}})
+              </h2>
+              <div class="alert alert-success" style="margin-bottom: 0;"
+                   *ngIf="row.referred_from_location && !row.referral_completed">
+                <p class="">Patient was refered to this clinic on <strong>{{ row.dateEnrolledView
+                  }}</strong>
+                  from <strong>{{row.referred_from_location}}</strong>
+                </p>
+              </div>
+            </div>
+            <div class="program-body" [ngStyle]="{ 'background-color': addBackground  }">
+              <div *ngIf="row.isEnrolled" class="program-info">
+                <div class="program-snapshot">
+                  <div [ngSwitch]="row.baseRoute">
+                    <!-- <hiv-snapshot (addBackground)="onAddBackground($event)" *ngSwitchCase="'hiv'"
+                                  [patient]="patient" [program]="row.program">
+                    </hiv-snapshot>
+                    <cdm-snapshot (addBackground)="onAddBackground($event)" *ngSwitchCase="'cdm'"
+                                  [patient]="patient">
+                    </cdm-snapshot> -->
+                    <oncology-snapshot
+                      (addBackground)="onAddBackground($event)"
+                      *ngSwitchCase="'treatment'"
+                      [patient]="patient"
+                      [programUuid]="row.programUuid">
+                    </oncology-snapshot>
+                    <oncology-snapshot
+                    (addBackground)="onAddBackground($event)"
+                    *ngSwitchCase="'screening'"
+                    [patient]="patient"
+                    [programUuid]="row.programUuid">
+                  </oncology-snapshot>
+                  <oncology-snapshot
+                  (addBackground)="onAddBackground($event)"
+                  *ngSwitchCase="'research'"
+                  [patient]="patient"
+                  [programUuid]="row.programUuid">
+                </oncology-snapshot>
+                  </div>
+                </div>
+                <div class="clear clear-fix">&nbsp;</div>
+              </div>
+            </div>
+            <div class="program-footer">
+              <div class="input-group">
+                <div class="ui-grid-col-12 buttons">
+                  <a class="btn btn-primary" routerLink="{{row.buttons.landing.url}}"
+                     *ngIf="row.isEnrolled">{{row.buttons.landing.display}}</a>
+                  <a class="btn btn-info" routerLink="{{row.buttons.visit.url}}" *ngIf="row.isEnrolled">{{row.buttons.visit.display}}</a>
+                  <a class="btn btn-success" (click)="showReferralEncounter(row)"
+                     *ngIf="row.referred_from_location && !row.referral_completed">Referral Details</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+    <div *ngIf="!programsBusy && enrolledProgrames.length === 0 && !hasError">
+      <p class="alert alert-info">
+        The patient is not enrolled in any program.
+        <button class="btn btn-primary pull-right" (click)="loadProgramManager()">Enroll into Program</button>
+      </p>
+    </div>
+    <div *ngIf="!programsBusy && lastEnrolledPrograms.length > 0 && enrolledProgrames.length === 0 && !hasError">
+      <h4 class="component-title">Previous Enrolled Programs</h4>
+      <table class="table table-stripped">
+        <thead>
+        <tr>
+          <th>Program Name</th>
+          <th>Location</th>
+          <th>Started</th>
+          <th>Stopped</th>
+          <th>Summary</th>
+        </tr>
+        </thead>
+        <tbody>
+          <ng-container *ngFor="let program of lastEnrolledPrograms">
+            <h5 style="text-transform: uppercase; padding-left: 4px;"><strong>{{ program.baseRoute }}</strong></h5>
+            <tr *ngIf="program.program">
+              <td>{{ program.program.display }}</td>
+              <td>{{ program.enrolledProgram.location?.display }}</td>
+              <td>{{ program.enrolledProgram.dateEnrolled }}</td>
+              <td>{{ program.enrolledProgram.dateCompleted }}</td>
+              <td><button class="btn btn-primary" style="color: #fff !important;" (click)="viewSummary(program)">View</button></td>
+            </tr>
+          </ng-container>
+        </tbody>
+      </table>
+    </div>
+    <div class="errors" *ngIf="errors.length > 0">
+      <p class="alert" *ngFor="let error of errors;">
+        <em class="text-danger">{{error.message}}</em>
+      </p>
+    </div>
+    <div class="modal fade" bsModal #staticModal="bs-modal" [config]="{backdrop: 'static'}"
+         tabindex="-1" role="dialog"
+         aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title pull-left">Submitted Referral Encounter</h3>
+            <button type="button" class="close pull-right" aria-label="Close"
+                    (click)="hideEncounterModal()">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <busy *ngIf="loadingEncounter" [message]="'Loading Encounter'"></busy>
+            <p class="obs-wrapper">
+            <ul class="nav nav-tabs">
+              <li *ngIf="selectedEncounter" class="active"><a data-toggle="tab" href="#checkinEncounter"
+                                    (click)="toggleDetailEncounter()">Referral Encounter</a></li>
+              <li *ngIf="selectedVisitEncounter"><a data-toggle="tab" href="#referringEncounter" (click)="toggleDetailEncounter()">Visit
+                Encounter</a></li>
+            </ul>
+            <ng-container *ngIf="selectedVisitEncounter || selectedEncounter">
+              <div id="referringEncounter" [hidden]="!showReferralEncounterDetail">
+                <div class="panel panel-default" *ngIf="showReferralEncounterDetail">
+                  <p style="font-weight: bold;" class="page-label panel-heading text-primary">Encounter
+                    Form</p>
+                  <div class="panel-body"><strong>{{selectedEncounter?.form.name}}</strong></div>
+                </div>
+                <pretty-encounter-viewer
+                  [encounter]="selectedEncounter"></pretty-encounter-viewer>
+              </div>
+              <div id="checkinEncounter" [hidden]="!showVisitEncounterDetail">
+                <div class="panel panel-default" *ngIf="showVisitEncounterDetail">
+                  <p style="font-weight: bold;" class="page-label panel-heading text-primary">Encounter
+                    Form</p>
+                  <div class="panel-body"><strong>{{selectedVisitEncounter?.form.name}}</strong></div>
+                </div>
+                <pretty-encounter-viewer
+                  [encounter]="selectedVisitEncounter"></pretty-encounter-viewer>
+              </div>
+            </ng-container>
+          </div>
+        </div>
+      </div>
+</div>
+</div>
+  <div *ngIf="myMedicalService === 'TREATMENT' || myMedicalService === 'RESEARCH' " >
+      <div class="row">
+        <div class="column left">
+          <div class="panel panel-default">
+          <div class="panel-heading">Patient Details</div>
+          <div class="panel-body">
+          <table class="table table-striped" >
+            <thead>
+              <tr>
+                <th></th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+               <tr>
+                 <td><strong>Phone Number :</strong> {{patient.person.patientPhoneNumber}}</td>
+                 <td><strong>County :</strong> {{patient._openmrsModel.person.preferredAddress.address1}}</td>
+
+                 <!-- <td class="{{ patient.person.dead ? 'text-danger' : '' }}"><strong>Deceased : </strong><span *ngIf="patient.person.dead" class="{{ patient.person.dead ? 'text-danger' : '' }}"><strong>Yes</strong></span><span *ngIf="!patient.person.dead">No</span></td> -->
+               </tr>
+               <!-- <tr>
+                 <td><strong>Gender : </strong>{{patient.person.gender}}</td>
+                 <td><strong>Cause of Death : </strong>{{patient.person.causeOfDeath}}</td>
+               </tr>
+              -->
+            </tbody>
+          </table>
+        </div>
+        </div>
+      </div>
+        <div class="column right">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <div>
+                <h3 class="panel-title">Patient Programs
+                  <button routerLink="/" class="panel-title glyphicon glyphicon-plus" style="float: right; color:black;" id="server-settings" type="submit">Add
+                  </button>
+                </h3>
+              </div>
+
+            </div>
+            <div class="panel-body">
+              <table class="table table-striped table-hover">
+                <thead>
+                  <tr>
+                    <th>Program</th>
+                    <th>Since</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr style="cursor: pointer;" *ngFor="let enrolledProgram of enrolledProgrames  | paginate: { itemsPerPage: 5, currentPage: page }; let i = index;">
+                    <td>{{enrolledProgram.concept.display }}</td>
+                    <td>{{enrolledProgram.dateEnrolled | date: 'MMM dd, yyyy'}}</td>
+                    <td>
+                      <!-- <a *ngIf="(encounter && encounter.form && encounter.form.name && encounter.form.name.indexOf('EICI') >= 0)" (click)="editEncounter(encounter)">
+                                      <span class="glyphicon text-primary glyphicon-edit"></span>
+                                  </a> -->
+                    </td>
+                    <!-- <td>
+                      <a *ngIf="(encounter && encounter.form && encounter.form.name && encounter.form.name && encounter.form.name.indexOf('EICI') >= 0)"  type="button" (click)="showEncounterViewer(encounter)">
+                        <span class="glyphicon glyphicon-list-alt"></span>
+                      </a>
+                      </td> -->
+                    <!-- <td>
+                      <a type="button" (click)="showEncounterObservations(encounter)" data-target="#encounter_modal" data-toggle="modal">
+                                      <span class="glyphicon text-primary glyphicon-eye-open"></span>
+                                  </a>
+                    </td> -->
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="column left">
+          <div class="panel panel-default">
+          <div class="panel-heading">Diagnosis</div>
+          <div class="panel-body">
+            <oncology-diagnosis-history [programUuid]="treatmentUuid"></oncology-diagnosis-history>
+        </div>
+        </div>
+      </div>
+        <div class="column right">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <div>
+                <h3 class="panel-title">Appointments
+                </h3>
+              </div>
+
+            </div>
+            <div class="panel-body">
+              <div *ngFor="let error of errors" class="alert alert-danger alert-dismissible">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button> {{error.message}}
+              </div>
+
+              <div class="table-responsive">
+                <table class='table table-hover table-striped table-bordered table-responsive'>
+                  <thead>
+                    <tr>
+                      <th>Date of Previous Visit</th>
+                      <th>Next Appointment Date</th>
+                    </tr>
+                  </thead>
+                  <tbody *ngIf="appointmentsummaryLoaded && !apphasData">
+                    <tr>
+                      <td colspan="2">
+                        <p class="alert alert-danger">No appointment history records available</p>
+                      </td>
+                    </tr>
+                  </tbody>
+                  <tbody *ngIf="appointmentsummaryLoaded && apphasData">
+                      <tr *ngFor="let appointment of appointments | paginate: { itemsPerPage: 5, currentPage: page }; let i = index">
+                        <td>{{ appointment.date }}</td>
+                        <td>{{ appointment.appointment_date }}</td>
+                      </tr>
+                    </tbody>
+                </table>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Patient Vitals</h3>
+    </div>
+    <div class="panel-body">
+      <table class='table table-hover table-striped table-responsive'>
+        <thead>
+          <tr class="labels">
+            <th></th>
+            <th>Date</th>
+            <th>BP</th>
+            <th>Pulse</th>
+            <th>Temperature</th>
+            <!-- <th>Oxygen Sat</th> -->
+            <th>Height</th>
+            <th>Weight</th>
+            <th *ngIf="patient && patient?.person.age >= 18 ">BMI</th>
+            <th *ngIf="patient && patient?.person.age < 18 ">Height For Age</th>
+            <th *ngIf="patient && patient?.person.age < 5 ">Weight For Height</th>
+            <th *ngIf="patient && patient?.person.age < 18 && patient?.person.age >= 5 ">BMI For Age</th>
+            <th>BSA</th>
+            <!-- <th>ECOG</th>
+            <th>INR</th>
+            <th>LCC</th>
+            <th>RCC</th> -->
+          </tr>
+        </thead>
+        <tr *ngFor="let vitals of vitals; let i = index;" class="vitals">
+          <td>
+            <span class="glyphicon glyphicon-warning-sign text-danger" *ngIf="(vitals.f_systolic_bp && (vitals.f_systolic_bp <= 80 || vitals.f_systolic_bp >= 140))
+              || (vitals.f_diastolic_bp && (vitals.f_diastolic_bp <= 50 || vitals.f_diastolic_bp >= 90)) || (vitals.pulse && vitals.pulse >= 100)
+              || (vitals.temp && (vitals.temp <= 35.0 || vitals.temp >= 38.0)) || (vitals.oxygen_sat && vitals.oxygen_sat <= 89)
+              || (vitals.BMI && (vitals.BMI <= 18 || vitals.BMI >= 30))">
+      </span>
+          <td>{{(vitals.encounter_datetime | date:'dd-MM-yyyy')  || '&nbsp;'}}</td>
+          <td>
+            <span class="systolic_bp"
+              [style.color]="(vitals.f_systolic_bp && (vitals.f_systolic_bp <= 80 || vitals.f_systolic_bp >= 140)) ? 'red':''">{{vitals.f_systolic_bp && vitals.f_systolic_bp + "/"}}</span>
+            <span class="f_diastolic_bp"
+              [style.color]="(vitals.f_diastolic_bp && (vitals.f_diastolic_bp <= 50 || vitals.f_diastolic_bp >= 90)) ? 'red':''">{{(vitals.f_diastolic_bp && vitals.f_diastolic_bp)  || '&nbsp;'}}</span>
+          </td>
+          <td>
+            <span class="pulse"
+              [style.color]="(vitals.pulse && (vitals.pulse <= 0 || vitals.pulse >= 100))? 'red':''">{{vitals.pulse  || '&nbsp;'}}</span>
+          </td>
+          <td>
+            <span class="temp"
+              [style.color]="(vitals.temp && (vitals.temp <= 35.0 || vitals.temp >= 38.0)) ? 'red':''">{{vitals.temp  || '&nbsp;'}}</span>
+          </td>
+          <!-- <td>
+            <span
+              [style.color]="(vitals.oxygen_sat && vitals.oxygen_sat <= 89)? 'red':''">{{vitals.oxygen_sat  || '&nbsp;'}}</span>
+          </td> -->
+          <td>{{vitals.height  || '&nbsp;'}}</td>
+          <td>{{vitals.weight  || '&nbsp;'}}</td>
+          <td *ngIf="patient && patient?.person.age >= 18">
+            <span
+              [style.color]="(vitals.BMI && (vitals.BMI <= 18 || vitals.BMI >= 30))? 'red':''">{{vitals?.BMI || '&nbsp;'}}</span>
+          </td>
+          <td *ngIf="patient && patient?.person.age<18">
+            <span
+              [style.color]="vitals.heightForAge && (vitals.heightForAge < 0 )? 'red':''">{{vitals?.heightForAge || '&nbsp;'}}</span>
+          </td>
+          <td *ngIf="patient && patient?.person.age<5 ">
+            <span
+              [style.color]="vitals.weightForHeight && (vitals.weightForHeight < 0 )? 'red':''">{{vitals?.weightForHeight || '&nbsp;'}}</span>
+          </td>
+          <td *ngIf="patient && patient?.person.age<18  && patient?.person.age>4">
+            <span
+              [style.color]="vitals.bmiForAge && (vitals.bmiForAge < 0 )? 'red':''">{{vitals?.bmiForAge || '&nbsp;'}}</span>
+          </td>
+          <td>
+            {{vitals.bsa  || '&nbsp;'}}
+          </td>
+          <td *ngIf= "vitals.length === 0">{{noData}}</td>
+        </tr>
+      </table>
+      <div *ngFor="let error of errors" class="alert alert-danger alert-dismissible">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button> {{error.message}}
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Notes</h3>
+    </div>
+    <div class="scroll-x" *ngIf="encounters && encounters.length > 0">
+      <table class="table table-striped table-hover">
+        <thead>
+          <tr>
+            <th>Encounter Date</th>
+            <th>Encounter Type</th>
+            <th>Form</th>
+            <th>Provider</th>
+            <th> Provider Location</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="cursor: pointer;" *ngFor="let encounter of encounters | paginate: { itemsPerPage: 10, currentPage: page }; let i = index;">
+            <td>{{encounter.encounterDatetime | date: 'MMM dd, yyyy hh:mm a'}}</td>
+            <td>{{encounter.encounterType.display}}</td>
+            <td><span *ngIf="encounter.form">{{encounter.form.name}}</span></td>
+            <td>{{encounter.provider.display | patientEncounterProviderPipe}}</td>
+            <td>{{encounter.location.display}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Medication</h3>
+    </div>
+    <div class="panel-body">
+      <oncology-medication-history [programUuid]="treatmentUuid"></oncology-medication-history>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">lab results</h3>
+    </div>
+    <div class="panel-body">
+      <lab-result></lab-result>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Imaging </h3>
+    </div>
+    <div class="panel-body">
+      <table class='table table-hover table-striped table-responsive'>
+        <thead>
+          <tr class="labels">
+            <th></th>
+            <th>Date</th>
+            <th>Imaging Type</th>
+            <th>Uploaded Report</th>
+            <th>Findings</th>
+          </tr>
+          <tbody>
+
+          </tbody>
+        </table>
+    </div>
+  </div>
+</div>

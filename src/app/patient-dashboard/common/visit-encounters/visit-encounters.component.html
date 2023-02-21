@@ -1,0 +1,8 @@
+<p-tabView>
+    <p-tabPanel header="Visits">
+        <visit-encounters-list [encounters]="patientEncounters" [showVisitsObservations]="showVisitsObservations"></visit-encounters-list>
+    </p-tabPanel>
+    <p-tabPanel header="Encounters">
+        <app-patient-encounters ></app-patient-encounters>
+    </p-tabPanel>
+  </p-tabView>

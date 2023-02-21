@@ -1,0 +1,13 @@
+.dashbtn {
+    border-radius: 3px;
+    box-shadow: none;
+    border: 1px solid #01cc0b;
+    margin-left:  20px;
+    margin-top: 20px;
+    height: 70px;
+    width: 300px;
+  }
+  .row {
+    margin-right: 15px;
+    margin-left: 15px;
+}

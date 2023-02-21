@@ -1,0 +1,14 @@
+.location {
+    padding: 1% 0 1% 0;
+}
+
+ng-select {
+    display:inline-block;
+    width:80%;margin:0;
+    position:relative;vertical-align:middle;
+    width: 80%;
+}
+
+.list-group-item {
+    padding:4px;
+}

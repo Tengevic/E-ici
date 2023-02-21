@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="row">
+  <div class="col-sm-12">
+  <h3>Clinical Notes</h3>
+  </div><!-- /col-sm-12 -->
+  </div><!-- /row -->
+  <div *ngFor="let imagingComment of imagingComments">
+  <div class="row">
+  <div class="col-sm-1">
+  <div class="thumbnail">
+  <!-- <img class="img-responsive user-photo" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png"> -->
+  </div><!-- /thumbnail -->
+  </div><!-- /col-sm-1 -->
+  <div class="col-sm-8">
+  <div class="panel panel-default">
+  <div class="panel-heading">
+  <strong style="align-content: left;">{{imagingComment.auditInfo.creator.display | titlecase}} &nbsp;&nbsp;- &nbsp;&nbsp;</strong> <span class="text-muted " style="align-content: right;">commented: {{imagingComment.auditInfo.dateCreated | date}}</span>
+  </div>
+  <div class="panel-body">
+     {{imagingComment.value}}
+  </div><!-- /panel-body -->
+  </div><!-- /panel panel-default -->
+  </div><!-- /col-sm-5 -->
+  
+  </div><!-- /row -->
+</div>
+  
+  </div><!-- /container -->
+  <div style="margin-bottom: 10px;">
+    <label>Notes</label>
+    <div>
+      <textarea required [(ngModel)]="imageReportFindingsText" type="text" rows="4" cols="30" class="form-control"
+        placeholder="Enter your Comments" > </textarea>
+    </div>
+    <div class="row">
+      <button class="btn btn-success pull-right" style="margin: 5px;" type="button" [disabled]="!imageReportFindingsText" (click)="addComments(imagingComments)">
+        <span>Post Comment</span>
+      </button>
+   </div>
+  </div>

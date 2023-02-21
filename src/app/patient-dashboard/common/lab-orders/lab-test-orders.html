@@ -1,0 +1,179 @@
+<div>
+  <!-- <div [ngBusy]="{busy:[fetchingResults, isBusy],message:'Loading orders...'}"></div> -->
+  <div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="form-group">
+          <label for="patientIdentifer">Patient Identifer</label>
+          <select *ngIf="patient" class="form-control" [(ngModel)]="patientIdentifer">
+            <option *ngFor="let c of patient.identifiers.openmrsModel" [ngValue]="c.identifier">{{c.identifierType.name}}</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group">
+          <label for="patientIdentifer">Collection Date</label>
+          <date-time-picker tabindex="0" [modelValue]="collectionDate" [id]="'collectionDate'" (onDateChange)="collectionDateChanged($event)"></date-time-picker>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group">
+          <label for="patientIdentifer">Number of Copies</label>
+          <input type="text" class="form-control" [(ngModel)]="copies" />
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="table-responsive">
+        <table class="table table-striped ">
+          <thead>
+            <tr>
+              <th>Order Date</th>
+              <th>Order No</th>
+              <th>Test Name</th>
+              <th>Ordered By</th>
+              <th>Accession Number</th>
+              <th>Sample Collected</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let order of labOrdersEtl | paginate: { itemsPerPage: 10, currentPage: page }; let i = index; ">
+              <td>
+                {{order.date_activated | date:'dd-MM-yyyy'}}
+              </td>
+              <td>
+                {{order.orderNumber}}
+              </td>
+              <td>
+                {{order.display}}
+              </td>
+              <td>
+                {{order.provider_name}}
+              </td>
+              <td (click)="printViaBixolon(order.accessionNumber)">
+                <ngx-barcode [bc-value]="order.accessionNumber" [bc-element-type]="elementType" [bc-format]="format" [bc-line-color]="lineColor"
+                [bc-width]="width" [bc-height]="height" [bc-display-value]="displayValue" [bc-font-options]="fontOptions" [bc-font]="font"
+                [bc-text-align]="textAlign" [bc-text-position]="textPosition" [bc-text-margin]="textMargin" [bc-font-size]="fontSize" [bc-background]="background"
+                [bc-margin]="margin" [bc-margin-top]="marginTop" [bc-margin-bottom]="marginBottom" [bc-margin-left]="marginLeft" [bc-margin-right]="marginRight" > </ngx-barcode>
+              </td>
+              <td >
+                <span  aria-hidden="true" *ngIf="order.sample_drawn === 'No'" style="color: red;text-align: center">{{order.sample_drawn}}</span>
+                <span  aria-hidden="true" *ngIf="order.sample_drawn === 'Yes'" style="text-align: center">{{order.sample_drawn}}</span>
+              </td>
+              <td>
+                  <button (click)="collectedSample(order)" [disabled]="order.accessionNumber"   class="btn default" style="background-color: white;border-width: 1px; border-color: gray">
+                      <span class="fa fa-save" aria-hidden="true"></span>
+                      Sample Collected
+                    </button>
+                <button (click)="setFormResults(order)" class="btn default" style="background-color: white;border-width: 1px; border-color: gray">
+              <span class="fa fa-save" aria-hidden="true"></span>
+              Enter Lab Results
+            </button>
+            <button [attr.disable]="isPrinting" [disabled] ="order.sample_drawn === null || order.sample_drawn === 'NO'"
+            (click)="printLabel(order)" class="btn" style="background-color: white;">
+    <span class="glyphicon glyphicon-print"  aria-hidden="true"></span>
+ </button>
+
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+      <div>
+        <pagination-controls (pageChange)="page = $event" style="cursor: pointer;"></pagination-controls>
+      </div>
+
+    </div>
+
+    <p-dialog header="Post Lab Order" [(visible)]="displayDialog" minHieght="300" position="center" modal="true">
+      <lab-order-search-post [order]="currentOrder" [reset]="currentOrder === null" (resetEvent)="handleResetEvent($event)"></lab-order-search-post>
+    </p-dialog>
+
+    <p-dialog header="Clear Sample List" [(visible)]="displayConfirmDialog" modal="modal" width="300" responsive="true">
+        <p>This will clear sample collected field. Are you sure you want to clear the field?</p>
+        <p-footer>
+          <div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix">
+            <button type="button" pButton icon="fa-close" (click)="closeConfirmationDialog()" label="No"></button>
+            <button type="button" pButton icon="fa-check" (click)="clearSampleCollectedList()" label="Yes"></button>
+          </div>
+        </p-footer>
+      </p-dialog>
+
+      <p-dialog header="Sample Collected" [(visible)]="displaySampleDialog" styleClass="edit-address-dialog">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12 col-sm-12 col-lg-12 col-xs-12">
+              <div class="alert alert-success" *ngIf="showSuccessAlert" style="margin-top:10px">
+                <strong>Done!</strong> {{successAlert}}
+              </div>
+              <div class="alert alert-danger" *ngIf="showErrorAlert" style="margin-top:10px">
+                <strong>{{errorTitle}}</strong> {{errorAlert}}
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <form name="personForm">
+
+
+              <div class="col-md-4 col-lg-4 col-sm-4 col-xs-4">
+                <div *ngIf="errors" style="color: red !important">
+                  <div class="col-md-12 col-sm-12 col-lg-12 col-xs-12">
+                    <div>{{errors.sampleMessage}}</div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="sample">Sample Collected</label>
+                  <select class="form-control" [(ngModel)]="sampleCollected" name="sampleCollected"
+                          (change)="onSampleSelectedChange($event)">
+                    <option *ngFor="let opt of sampleCollectedOptions" [value]="opt.val">{{opt.label}}</option>
+                  </select>
+                </div>
+              </div>
+
+
+              <div class="col-md-4 col-lg-4 col-sm-4 col-xs-4" [hidden]="!sampleCollected">
+                <div *ngIf="errors" style="color: red !important">
+                  <div class="col-md-12 col-sm-12 col-lg-12 col-xs-12">
+                    <div>{{errors.sampleMessage}}</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6">
+                <div class="form-group" [hidden]="hideDateField">
+                      <label>Accession Number <span *ngIf="!accessionNumber" class="required"> * </span></label>
+                      <input type="text" id="accessionNumber" class="form-control" [(ngModel)]="accessionNumber"  name="accessionNumber" disabled>
+                      <!-- <span *ngIf="sampleCollected === '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' " class="badge btn pull-right" (click)="generateLabaccessionNumber()">Generate</span> -->
+                      <div *ngIf="!accessionNumber">
+                        <div class="help-block" style="color:red;">Accession Number is required!</div>
+                      </div>
+                    </div>
+              </div>
+              <div class="col-md-4 col-lg-4 col-sm-4 col-xs-4\" [hidden]="hideDateField">
+                <div *ngIf="errors" style="color: red !important">
+                  <div class="col-md-12 col-sm-12 col-lg-12 col-xs-12">
+                    <div>{{errors.message}}</div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="date" class="control-label">Date Sample Collected</label>
+                  <input type="date" id="date" class="form-control" [(ngModel)]="collectionDate" name="date" max="{{maxDate}}"
+                         (change)="onDateSelectedChange($event)">
+                </div>
+              </div>
+              <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                <button class="btn btn-primary" type="button" (click)="saveSampleCollectedObs()"
+                        ><span>Save</span></button>
+                <button class="btn btn-danger pull-right" type="button" (click)="dismissSampleDialog()">
+                  <span>Cancel</span></button>
+                <!--[disabled]="disableButton"-->
+
+              </div>
+            </form>
+          </div>
+        </div>
+      </p-dialog>
+    </div>
+  </div>

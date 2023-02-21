@@ -1,0 +1,65 @@
+{
+  "id": "analyticsDashboard",
+  "name": "Data Analytics Dashboard",
+  "baseRoute": "data-analytics",
+  "routeParameter": "",
+  "nonProgramRoutes": [
+    {
+      "url": "program-enrollment",
+      "label": "Program Enrollment",
+      "icon": "fa fa-list-alt",
+      "isSideBarOpen": false
+    },
+    {
+      "url": "data-entry-statistics",
+      "label": "Data Entry Statistics",
+      "icon": "fa fa-bar-chart",
+      "isSideBarOpen": false
+    },
+    {
+      "url": "treatment-reports",
+      "label": "Treatment Reports",
+      "icon": "fa fa-bar-chart",
+      "isSideBarOpen": false
+    }
+  ],
+  "programs": [],
+  "medicalServices": [
+    {
+      "medicalServiceName": "TREATMENT",
+      "baseRoute": "treatment",
+      "alias": "treatment",
+      "routes": [
+        {
+          "url": "treatment-reports",
+          "label": "Treatment Reports",
+          "icon": "fa fa-bar-chart",
+          "isSideBarOpen": false
+        },
+        {
+          "url": "clinic-flow",
+          "label": "Clinic Flow",
+          "icon": "fa fa-clock-o"
+        },
+        {
+          "url": "program-enrollment",
+          "label": "Program Enrollment",
+          "icon": "fa fa-list-alt",
+          "isSideBarOpen": false
+        },
+        {
+          "url": "compassionate-report",
+          "label": "Compassionate Reports",
+          "icon": "fa fa-money",
+          "isSideBarOpen": false
+        },
+        {
+          "url": "data-entry-statistics",
+          "label": "Data Entry Statistics",
+          "icon": "fa fa-bar-chart",
+          "isSideBarOpen": false
+        }
+      ]
+    }
+  ]
+}

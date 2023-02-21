@@ -1,0 +1,64 @@
+{
+  "uud1": {
+    "name": "TREATMENT",
+    "programs": [
+      {
+        "uuid": "e48b266e-4d80-41f8-a56a-a8ce5449ebc6",
+        "name": "SICKLE CELL PROGRAM"
+      },
+      {
+        "uuid": "698b7153-bff3-4931-9638-d279ca47b32e",
+        "name": "MULTIPLE MYELOMA PROGRAM"
+      },
+      {
+        "uuid": "a3610ba4-9811-46b3-9628-83ec9310be13",
+        "name": "HEMOPHILIA PROGRAM"
+      },
+      {
+        "uuid": "725b5193-3452-43fc-aca3-6a80432d9bfa",
+        "name": "GENERAL TREATMENT PROGRAM"
+      },
+      {
+        "uuid": "418fe011-a903-4862-93d4-5e7c84d9c253",
+        "name": "ANTICOAGULATION TREATMENT PROGRAM"
+      },
+      {
+        "uuid": "43b42170-b3ce-4e03-9390-6bd78384ac06",
+        "name": "GYN-ONCOLOGY TREATMENT PROGRAM"
+      },
+      {
+        "uuid": "88566621-828f-4569-9af5-c54f8237750a",
+        "name": "BREAST CANCER TREATMENT PROGRAM"
+      }
+    ]
+  },
+  "uud2": {
+    "name": "SCREENING",
+    "programs": [
+      {
+        "uuid": "142939b0-28a9-4649-baf9-a9d012bf3b3d",
+        "name": "BREAST CANCER SCREENING PROGRAM"
+      },
+      {
+        "uuid": "cad71628-692c-4d8f-8dac-b2e20bece27f",
+        "name": "CERVICAL CANCER SCREENING PROGRAM"
+      },
+      {
+        "uuid": "37ff4124-91fd-49e6-8261-057ccfb4fcd0",
+        "name": "EICI SCREENING AND DIAGNOSIS PROGRAM"
+      },
+      {
+        "uuid": "f6b6a16e-f2cb-4e4c-88b3-4836c33954f7",
+        "name": "EICI IThemba PROGRAM"
+      },
+      {
+        "uuid": "4c925c80-d282-437d-84cc-f3be134a61c4",
+        "name": "EICI Control Program"
+      }
+    ]
+  },
+  "uud3": {
+    "name": "RESEARCH",
+    "programs": []
+  }
+}

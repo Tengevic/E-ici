@@ -1,0 +1,128 @@
+{
+  "id": "clinicDashboard",
+  "name": "Clinic Dashboard",
+  "baseRoute": "clinic-dashboard",
+  "routeParameter": "locationUuid",
+  "nonProgramRoutes": [],
+  "programs": [],
+  "medicalServices": [
+    {
+      "medicalServiceName": "General",
+      "baseRoute": "general",
+      "alias": "general",
+      "routes": [
+        {
+          "url": "daily-schedule",
+          "label": "Daily Schedule",
+          "icon": "fa fa-calendar-o",
+          "isSideBarOpen": false
+        },
+        {
+          "url": "monthly-schedule",
+          "label": "Monthly Schedule",
+          "icon": "fa fa-calendar",
+          "isSideBarOpen": false
+        },
+        {
+          "url": "clinic-lab-orders",
+          "label": "Lab Test Orders",
+          "icon": "icon-i-pathology",
+          "isSideBarOpen": false
+        },
+        {
+          "url": "program-enrollment",
+          "label": "Program Enrollment",
+          "icon": "fa fa-list-alt",
+          "isSideBarOpen": false
+        },
+        {
+          "url": "group-manager",
+          "label": "Groups Manager",
+          "icon": "fa fa-users",
+          "isSideBarOpen": true
+        }
+      ]
+    },
+    {
+      "medicalServiceName": "TREATMENT",
+      "baseRoute": "treatment",
+      "alias": "treatment",
+      "routes": [
+        {
+          "url": "daily-schedule",
+          "label": "Daily Schedule",
+          "icon": "fa fa-calendar-o",
+          "isSideBarOpen": false
+        },
+        {
+          "url": "monthly-schedule",
+          "label": "Monthly Schedule",
+          "icon": "fa fa-calendar",
+          "isSideBarOpen": false
+        },
+        {
+          "url": "program-enrollment",
+          "label": "Program Enrollment",
+          "icon": "fa fa-list-alt",
+          "isSideBarOpen": false
+        },
+        {
+          "url": "referral/patient-referral-report",
+          "label": "Patient Referral",
+          "icon": "fa fa-file-pdf-o",
+          "isSideBarOpen": false
+        }
+      ]
+    },
+    {
+      "medicalServiceName": "SCREENING",
+      "baseRoute": "screening",
+      "alias": "screening",
+      "routes": [
+        {
+          "url": "daily-schedule",
+          "label": "Daily Schedule",
+          "icon": "fa fa-calendar-o",
+          "isSideBarOpen": false
+        },
+        {
+          "url": "monthly-schedule",
+          "label": "Monthly Schedule",
+          "icon": "fa fa-calendar",
+          "isSideBarOpen": false
+        },
+        {
+          "url": "program-enrollment",
+          "label": "Program Enrollment",
+          "icon": "fa fa-list-alt",
+          "isSideBarOpen": false
+        }
+      ]
+    },
+    {
+      "medicalServiceName": "RESEARCH",
+      "baseRoute": "research",
+      "alias": "research",
+      "routes": [
+        {
+          "url": "daily-schedule",
+          "label": "Daily Schedule",
+          "icon": "fa fa-calendar-o",
+          "isSideBarOpen": false
+        },
+        {
+          "url": "monthly-schedule",
+          "label": "Monthly Schedule",
+          "icon": "fa fa-calendar",
+          "isSideBarOpen": false
+        },
+        {
+          "url": "program-enrollment",
+          "label": "Program Enrollment",
+          "icon": "fa fa-list-alt",
+          "isSideBarOpen": false
+        }
+      ]
+    }
+  ]
+}

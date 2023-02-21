@@ -1,0 +1,47 @@
+.wrapper {
+  margin-top:24px;
+}
+
+.input-group-btn > .btn {
+  margin-left: 5px;
+}
+
+.input-group-btn:last-child > .btn {
+  border-radius: 3px;
+}
+
+.ladda-button {
+  border-radius: 3px;
+  padding: 11px 16px 10px 16px;
+}
+
+.ladda-button[data-size=xs] .ladda-label {
+  font-size: 18px !important;
+}
+
+.form-control:focus {
+  border-color: #f1f1f1;
+}
+
+.box-body .component-wrapper {
+  padding-bottom: 20px;
+}
+#search {
+  padding-top: 11px;
+  padding-bottom: 11px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+#reset{
+  padding-top: 11px;
+  padding-bottom: 11px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+}
+#search-textbox{
+  margin-bottom: 5px;
+}
+.btn {
+  margin-right: 7px;
+}

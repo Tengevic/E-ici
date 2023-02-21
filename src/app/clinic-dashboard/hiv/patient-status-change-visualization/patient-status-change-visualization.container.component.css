@@ -1,0 +1,11 @@
+chart {
+  display: block;
+}
+
+.panel {
+  position: relative;
+}
+
+.wrapper {
+  padding:1px;
+}

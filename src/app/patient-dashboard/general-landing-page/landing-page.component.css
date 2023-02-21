@@ -1,0 +1,341 @@
+landing-page {
+  display: block;
+  margin-bottom: 60px;
+}
+.panel-default>.panel-heading {
+  color: #fff;
+  border-bottom-width: thick;
+  background-color: #1b6dc1;
+  border-color: #41bc3f;
+}
+@media screen and (min-width:600px) {
+    .program-header {
+        width:70%;
+    }
+}
+.example-card {
+  max-width: 800px;
+}
+
+.example-header-image {
+  background-size: cover;
+}
+
+.program-header-wrapper {
+  background-color: #203864;
+  color: #ccc;
+}
+/* Create two unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 10px;
+}
+
+.left {
+  width: 50%;
+}
+
+.right {
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.program .program-header, .program .program-footer{
+  margin: 0 20px 0 20px;
+  font-size: 1.72rem;
+  border: none;
+  padding: 0 0;
+  font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  line-height: 36px;
+  text-transform: none;
+  color: #fff;
+  opacity: 0.9;
+}
+
+.program.non-enrolled .program-body{
+  padding: 12px;
+}
+
+.program.non-enrolled .program-header-wrapper{
+
+  color: inherit;
+}
+
+.program-container-fluid {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.program .program-body {
+  padding-top:12px;
+  padding-bottom:12px;
+  border-left: 1px solid rgba(34, 36, 38, .15);
+  border-right: 1px solid rgba(34, 36, 38, .15);
+  border-bottom: 1px solid rgba(34, 36, 38, .15);
+}
+
+.program.non-enrolled .program-body {
+  border-top: 1px solid rgba(34, 36, 38, .15);
+}
+
+.program .program-footer {
+  background-color: whitesmoke;
+  color: #fff;
+  margin: 0;
+  padding: 5px 12px;
+  border: 1px solid rgba(34, 36, 38, .15);
+  border-top: 0;
+}
+
+.component-title {
+  font-size: 22px;
+  text-transform: capitalize;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(34,36,38,.15);
+  margin-bottom: 20px;
+}
+
+.program hr {
+  margin: 1rem 0;
+  line-height: 1;
+  height: 0;
+  font-weight: 700;
+  font-size: 1rem;
+  clear: both;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  color: rgba(0, 0, 0, .85);
+  user-select: none;
+  border-top: 1px solid rgba(34, 36, 38, .15);
+  border-bottom: 1px solid rgba(255, 255, 255, .1);
+}
+
+.program .enrolled {
+  margin-bottom: 20px;
+}
+
+.clear {
+  clear: both;
+}
+
+.dropdown a.edit-toggle {
+  position: absolute;
+  top: -30px;
+  right:12px;
+  color: #fff !important;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.open > .edit-dropdown {
+  -webkit-transform: scale(1, 1);
+  transform: scale(1, 1);
+  opacity:1;
+}
+
+.edit-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  float: left;
+  min-width: 160px;
+  margin: 0 5px 0 0;
+  font-size: 14px;
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: 0;
+  box-shadow: none;
+  width: calc(100% - 5px);
+  padding: 12px;
+  -webkit-transform-origin: top;
+  transform-origin: top;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-transform: scale(1, 0);
+  display: block;
+  transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+}
+
+.edit-dropdown:before {
+  position: absolute;
+  top: -7px;
+  right: 9px;
+  display: inline-block;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid #fff;
+  border-left: 7px solid transparent;
+  border-bottom-color: #fff;
+  content: '';
+}
+
+h3 {
+  padding-top:0;
+}
+
+.program-header-wrapper {
+  background-color: #203864;
+  color: #ccc;
+}
+
+.program.non-enrolled .program-body{
+  padding: 12px;
+}
+
+.program.non-enrolled .program-header-wrapper{
+  background-color: darkred;
+  color: #ccc;
+}
+
+.program .program-body {
+  padding-top:12px;
+  padding-bottom:12px;
+  border-left: 1px solid rgba(34, 36, 38, .15);
+  border-right: 1px solid rgba(34, 36, 38, .15);
+  border-bottom: 1px solid rgba(34, 36, 38, .15);
+}
+
+.program .program-footer {
+  background-color: whitesmoke;
+  color: #fff;
+  margin: 0;
+  padding: 5px;
+  border: 1px solid rgba(34, 36, 38, .15);
+  border-top: 0;
+}
+
+.program-container-fluid {
+  padding: 0 10px 0 10px;
+}
+
+.program hr {
+  margin: 1rem 0;
+  line-height: 1;
+  height: 0;
+  font-weight: 700;
+  font-size: 1rem;
+  clear: both;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  color: rgba(0, 0, 0, .85);
+  user-select: none;
+  border-top: 1px solid rgba(34, 36, 38, .15);
+  border-bottom: 1px solid rgba(255, 255, 255, .1);
+}
+
+.program .enrolled {
+  margin-bottom: 20px;
+}
+
+.clear {
+  clear: both;
+}
+
+.edit-dropdown {
+  margin-right: 12px;
+  width: calc(100% - 12px);
+  padding: 12px;
+}
+
+.open > .edit-dropdown {
+  -webkit-transform: scale(1, 1);
+  transform: scale(1, 1);
+  opacity:1;
+}
+
+.edit-dropdown {
+  opacity:.3;
+  -webkit-transform-origin: top;
+  transform-origin: top;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-transform: scale(1, 0);
+  display: block;
+  transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+}
+
+landing-page .program-footer a.btn {
+  color: #fff !important;
+  display: inline-block;
+  float: left;
+  margin-right: 10px;
+  padding: 6px 9px;
+}
+
+landing-page .program-footer a.btn:last-child {
+  margin-right: 0;
+}
+
+landing-page a.btn.btn-info {
+  margin-bottom: 0;
+  margin-left: 0;
+}
+
+.fa-pencil:before {
+  margin-right:5px;
+}
+
+label.buttons {
+  height: 22px;
+  display: block;
+}
+
+.program-body.pink {
+  background-color: pink;
+}
+
+.cell {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.enroll-button {
+margin-top:-2px;
+}
+
+.refer-status {
+display: block;
+background-color:#ACD5B6;
+color: rgb(2, 2, 26);
+font-size: 2rem;
+
+}
+
+.referral-message-container {
+  padding: 20px 15px;
+  margin-bottom: -26px;
+  border-left: 1px solid #dcdcdc;
+  border-right: 1px solid #dcdcdc
+}
+
+.buttons button {
+  float: left;
+}
+
+span.seperator {
+  padding: 0 !important;
+  display: inline-block;
+  float: left;
+  margin-right: 20px;
+  margin-left: 20px;
+  font-size: 24px;
+  font-weight: bolder;
+}
+blockquote {
+  padding: 10px 20px;
+  margin: 0 0 20px;
+  font-size: 17.5px;
+}

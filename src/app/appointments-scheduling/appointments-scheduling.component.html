@@ -1,0 +1,109 @@
+<div style="margin-top: 20px;">
+  <div class="container-fluid">
+    <form class="form-horizontal">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="input-group">
+          <input type="text" id="search-textbox" autocomplete="off" class="form-control input-lg search-texbox" [(ngModel)]="searchString" [ngModelOptions]="{standalone: true}"
+                (ngModelChange)="updatePatientCount($event)" placeholder="Enter the Patient Name or Identifier" autofocus="true">
+          <span class="input-group-btn">
+            <button [disabled]="isLoading" class="btn btn-primary2 btn-lg search_btn" (click)="loadPatient()">
+              <span><i class="glyphicon glyphicon-search"></i>Search</span>
+              <i *ngIf="isLoading" class="fa fa-spinner fa-spin fa-1x fa-fw"></i>
+            </button>
+            <button [disabled]="!isResetButton" class="btn btn-danger btn-lg reset_btn" (click)="resetSearchList()">
+              <i class="fa fa-trash fa-fw"></i> Reset
+            </button>
+          </span>
+        </div>
+      </div>
+    </form>
+    <div class="col-md-12 col-lg-10 col-sm-12 col-xs-12" *ngIf="noMatchingResults===true">
+      <div  class="alert">
+        <span>No Matching results for <i class="total text-bold">{{lastSearchString}}</i></span>
+      </div>
+    </div>
+    <div class="col-md-12 col-lg-10 col-sm-12 col-xs-12" *ngIf="!hideResults">
+      <br>
+    <div *ngIf="hasConductedSearch===true > 0" class="alert"><span class="total text-bold" (ngModel)="totalPatients">{{totalPatients}}</span>
+      <span *ngIf="totalPatients === 1"> patient found</span>
+      <span *ngIf="totalPatients !== 1"> patients found</span>
+    </div>
+    </div>
+  </div>
+</div>
+<div>
+  <p-tabView>
+    <p-tabPanel header="summary">
+      <mwl-calendar-week-view
+[viewDate]="viewDate"
+[events]="events"> </mwl-calendar-week-view>
+    </p-tabPanel>
+
+
+
+    <p-tabPanel header="Appointments List">
+      <div class="row" style="margin: 20px;">
+        <div class="column1"> </div>
+        <!-- <div class="column"> </div> -->
+        <div class="column2">
+          <div class="loader" *ngIf="busyIndicator.busy"><span><i class="fa fa-spinner fa-spin">
+          </i>{{busyIndicator.message}}</span>
+          </div>
+          <div>
+          <!-- <program-visit-encounter-search 
+                (filterSelected) ="filterSelected($event)"
+                [monthControl]="true"
+          ></program-visit-encounter-search> -->
+          <hr>
+          <div class="row">
+            <div class="col-md-12 text-center" >
+              <h3 style="margin-top: 5px;">{{ viewDate }}</h3>
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-md-12">
+              <span>Keys:
+              <span class="label label-success">Visits</span>
+                <span class="label label-info">Appointments</span>
+                <span class="label label-warning">Not returned</span>
+              </span>
+            </div>
+          </div>
+          </div>
+          <!-- <ng-template #customCellTemplate let-day="day" let-locale="locale">
+            <div class="cal-cell-top">
+              <span class="cal-day-number">{{ day.date }}</span>
+            </div>
+        
+            <p *ngFor="let event of day.events;" [ngStyle]="{'margin': '5px'}" (click)="navigateToDaily(event)" [ngClass]="event.class">{{event.title}}</p>
+        
+          </ng-template> -->
+          <ng-template #customCellTemplate let-day="day" let-locale="locale">
+            <div class="cal-cell-top">
+              <span class="cal-day-number">{{ day.date | calendarDate:'monthViewDayNumber':locale }}</span>
+            </div>
+        
+            <p *ngFor="let event of day.events;" [ngStyle]="{'margin': '5px'}" (click)="navigateToDaily(event)" [ngClass]="event.class">{{event.title}}</p>
+        
+          </ng-template>
+          <mwl-calendar-month-view [activeDayIsOpen]="activeDayIsOpen" [cellTemplate]="customCellTemplate" (dayClicked)="dayClicked($event.day)"
+            [viewDate]="viewDate"  [events]="events" (beforeViewRender)="beforeMonthViewRender($event)">
+          </mwl-calendar-month-view>
+        </div>
+      </div>
+    </p-tabPanel>
+    <p-tabPanel header="Booked Appointments">
+      <!-- <app-patient-encounters ></app-patient-encounters> -->
+  </p-tabPanel>
+  <p-tabPanel header="Missed Appointments">
+    <!-- <app-patient-encounters ></app-patient-encounters> -->
+</p-tabPanel>
+<p-tabPanel header="Admin">
+  <!-- <app-patient-encounters ></app-patient-encounters> -->
+</p-tabPanel>
+
+  </p-tabView>
+</div>
+
+

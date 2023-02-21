@@ -1,0 +1,14 @@
+<div>
+  <table class='table table-hover table-striped table-responsive'>
+    <thead>
+    <tr>
+      <th>Encounter Date change</th>
+      <th>Current Medication</th>
+    </tr>
+    </thead>
+    <tr *ngFor="let encounter of encounters">
+      <td>{{encounter.encounter_datetime }}</td>
+      <td>{{encounter.current_regimen || '&nbsp;'}}</td>
+    </tr>
+  </table>
+</div>

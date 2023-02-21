@@ -1,0 +1,2859 @@
+{
+  "reports": [
+    {
+      "report_type": "breast-cancer-screening-numbers",
+      "sections": [
+        {
+          "section": "total_breast_screened",
+          "report_indicators": ["total_breast_screened"]
+        },
+        {
+          "section": "normal_breast_call_rate%",
+          "report_indicators": ["normal_breast_call_rate%"]
+        },
+        {
+          "section": "abnormal_breast_call_rate%",
+          "report_indicators": ["abnormal_breast_call_rate%"]
+        },
+        {
+          "section": "normal_breast_screening_findings",
+          "report_indicators": [
+            "normal_breast_screening_findings",
+            "normal_breast_screening_findings_below_30yrs",
+            "normal_breast_screening_findings_30_to_40yrs",
+            "normal_breast_screening_findings_41_to_50yrs",
+            "normal_breast_screening_findings_51_to_69yrs",
+            "normal_breast_screening_findings_above_70yrs"
+          ]
+        },
+        {
+          "section": "abnormal_breast_screening_findings",
+          "report_indicators": [
+            "abnormal_breast_screening_findings",
+            "abnormal_breast_screening_findings_below_30yrs",
+            "abnormal_breast_screening_findings_30_to_40yrs",
+            "abnormal_breast_screening_findings_41_to_50yrs",
+            "abnormal_breast_screening_findings_51_to_69yrs",
+            "abnormal_breast_screening_findings_above_70yrs"
+          ]
+        }
+      ]
+    },
+    {
+      "report_type": "cervical-cancer-screening-numbers",
+      "sections": [
+        {
+          "section": "total_cervical_screened",
+          "report_indicators": ["total_cervical_screened"]
+        },
+        {
+          "section": "normal_cervical_call_rate%",
+          "report_indicators": ["normal_cervical_call_rate%"]
+        },
+        {
+          "section": "abnormal_cervical_call_rate%",
+          "report_indicators": ["abnormal_cervical_call_rate%"]
+        },
+        {
+          "section": "normal_cervical_screening",
+          "report_indicators": [
+            "normal_cervical_screening",
+            "normal_cervical_screening_below_30yrs",
+            "normal_cervical_screening_30_to_40yrs",
+            "normal_cervical_screening_41_to_50yrs",
+            "normal_cervical_screening_51_to_69yrs",
+            "normal_cervical_screening_above_70yrs"
+          ]
+        },
+        {
+          "section": "abnormal_cervical_screening",
+          "report_indicators": [
+            "abnormal_cervical_screening",
+            "abnormal_cervical_screening_below_30yrs",
+            "abnormal_cervical_screening_30_to_40yrs",
+            "abnormal_cervical_screening_41_to_50yrs",
+            "abnormal_cervical_screening_51_to_69yrs",
+            "abnormal_cervical_screening_above_70yrs"
+          ]
+        }
+      ]
+    },
+    {
+      "report_type": "combined-breast-cervical-cancer-screening-numbers",
+      "sections": [
+        {
+          "section": "total_screens",
+          "report_indicators": [
+            "total_screens",
+            "total_breast_screened",
+            "total_cervical_screened",
+            "total_breast_and_cervical_screened"
+          ]
+        }
+      ]
+    },
+    {
+      "report_type": "lung-cancer-screening-numbers",
+      "sections": [
+        {
+          "section": "total_lung_screened",
+          "report_indicators": [
+            "total_lung_screened",
+            "walk_in",
+            "scerred_from_clinic",
+            "cigarette_smoking",
+            "tobacco_use",
+            "chemical_exposure",
+            "asbestos_exposure",
+            "hiv_negative",
+            "hiv_positive",
+            "hiv_status_unknown",
+            "tb_treatment_received",
+            "no_tb_treatment",
+            "normal_xray_results",
+            "abnormal_xray_results",
+            "biopsy_done",
+            "biopsy_not_done",
+            "indication_of_pleural_mass_from_ct_findings",
+            "indication_of_mediastial_mass_from_ct_findings",
+            "indication_of_lung_mass_from_ct_findings",
+            "non_respiratory_disease",
+            "non_small_cell_lung_cancer",
+            "small_cell_lung_cancer"
+          ]
+        }
+      ]
+    },
+    {
+      "report_type": "lung-cancer-treatment-numbers",
+      "sections": [
+        {
+          "section": "enrolled_patients",
+          "report_indicators": [
+            "enrolled_patients",
+            "active_patients",
+            "deceased",
+            "small_cell_lung_cancer",
+            "non_small_cell_lung_cancer",
+            "adenocarcinoma",
+            "epidermoid_carcinoma",
+            "large_cell_carcinoma",
+            "mixed_squamous",
+            "lost_to_follow_up",
+            "stage_one",
+            "stage_two",
+            "stage_three",
+            "stage_four",
+            "limited_stage",
+            "extensive_stage",
+            "for_staging",
+            "chemotherapy",
+            "radiotherapy",
+            "surgery"
+          ]
+        }
+      ]
+    },
+    {
+      "report_type": "cervical-cancer-treatment-numbers",
+      "sections": [
+        {
+          "section": "enrolled_patients",
+          "report_indicators": [
+            "enrolled_patients",
+            "active_patients",
+            "deceased",
+            "small_cell_lung_cancer",
+            "non_small_cell_lung_cancer",
+            "adenocarcinoma",
+            "epidermoid_carcinoma",
+            "large_cell_carcinoma",
+            "mixed_squamous",
+            "lost_to_follow_up",
+            "stage_one",
+            "stage_two",
+            "stage_three",
+            "stage_four",
+            "limited_stage",
+            "extensive_stage",
+            "for_staging",
+            "chemotherapy",
+            "radiotherapy",
+            "surgery"
+          ]
+        }
+      ]
+    },
+    {
+      "report_type": "general-cancer-treatment-numbers",
+      "sections": [
+        {
+          "section": "enrolled_patients",
+          "report_indicators": ["enrolled_patients"]
+        },
+        {
+          "section": "active_patients",
+          "report_indicators": [
+            "active_patients",
+            "active_female_patients",
+            "active_female_patients_percent",
+            "active_male_patients",
+            "active_male_patients_percent"
+          ]
+        },
+        {
+          "section": "deceased",
+          "report_indicators": ["deceased", "deceased_female", "deceased_male"]
+        },
+        {
+          "section": "overall_cancer_staging",
+          "report_indicators": [
+            "stage_four",
+            "stage_three",
+            "stage_two",
+            "stage_one",
+            "limited_stage",
+            "extensive_stage"
+          ]
+        },
+        {
+          "section": "biopsy_type",
+          "report_indicators": [
+            "biopsy_type_bone_marrow",
+            "biopsy_type_core_needle",
+            "biopsy_type_ct_guided_biopsy",
+            "biopsy_type_fna",
+            "biopsy_type_skin_punch",
+            "biopsy_type_ultrasound_guided"
+          ]
+        },
+        {
+          "section": "referral_ordered",
+          "report_indicators": [
+            "no_refferal_ordered",
+            "surgery_referral",
+            "palitive_care_referral",
+            "nutritional_support",
+            "radiotherapy_referral",
+            "physical_therapy_referral",
+            "social_worker_referral",
+            "family_planning_referral"
+          ]
+        },
+        {
+          "section": "treatment_plan",
+          "report_indicators": [
+            "surgery",
+            "radiotherapy",
+            "chemotherapy",
+            "targeted_therapy"
+          ]
+        },
+        {
+          "section": "general_exam",
+          "report_indicators": [
+            "general_exam_cyanosis",
+            "general_exam_dehydration",
+            "general_exam_done",
+            "general_exam_edema",
+            "general_exam_fatique",
+            "general_exam_jaundice",
+            "general_exam_night_sweats",
+            "general_exam_pains",
+            "general_exam_normal",
+            "general_exam_pallor",
+            "general_exam_temporal_wasting",
+            "general_exam_weight_loss",
+            "general_exam_not_done",
+            "general_exam_other"
+          ]
+        },
+        {
+          "section": "heent",
+          "report_indicators": [
+            "heent_hearing_difficulties",
+            "heent_normal",
+            "heent_other",
+            "heent_swallowing_difficulties",
+            "heent_swelling",
+            "heent_vision_difficulties",
+            "heent_normal",
+            "heent_swallowing_difficulties",
+            "heent_swelling",
+            "heent_vision_difficulties"
+          ]
+        },
+        {
+          "section": "new_or_recurrence_cancer",
+          "report_indicators": ["new_cancer", "recurrence_cancer"]
+        },
+        {
+          "section": "cancer_type",
+          "report_indicators": [
+            "sarcoma",
+            "gu_cancer",
+            "gi_cancer",
+            "head_neck",
+            "gynecological_cancer",
+            "lympoma",
+            "skin_cancer",
+            "breast_cancer",
+            "leaukemia",
+            "other_solid_cancer",
+            "other_cancer",
+            "non_cancer"
+          ]
+        },
+        {
+          "section": "past_treatment",
+          "report_indicators": [
+            "past_treatment_biologicaltherapy",
+            "past_treatment_chemotherapy",
+            "past_treatment_homonaltherapy",
+            "past_treatment_radiationtherapy",
+            "past_treatment_surgery",
+            "past_treatment_targetedtherapies",
+            "past_treatment_traditionalmedicine"
+          ]
+        },
+        {
+          "section": "patient_condition",
+          "report_indicators": [
+            "patient_condition_fair",
+            "patient_condition_sick_looking"
+          ]
+        },
+        {
+          "section": "purpose_of_visit",
+          "report_indicators": [
+            "purpose_of_visit_initial",
+            "purpose_of_visit_return"
+          ]
+        }
+      ]
+    },
+    {
+      "report_type": "generalx-cancer-treatment-numbers",
+      "sections": [
+        {
+          "section": "active_patients",
+          "report_indicators": [
+            "active_patients",
+            "active_female_patients",
+            "active_female_patients_percent",
+            "active_male_patients",
+            "active_male_patients_percent"
+          ]
+        },
+        {
+          "section": "active_patients",
+          "report_indicators": [
+            "active_patients",
+            "active_female_patients",
+            "active_female_patients_percent",
+            "active_male_patients",
+            "active_male_patients_percent"
+          ]
+        },
+        {
+          "section": "active_patients",
+          "report_indicators": [
+            "active_patients",
+            "active_female_patients",
+            "active_female_patients_percent",
+            "active_male_patients",
+            "active_male_patients_percent"
+          ]
+        },
+        {
+          "section": "active_patients",
+          "report_indicators": [
+            "active_patients",
+            "active_female_patients",
+            "active_female_patients_percent",
+            "active_male_patients",
+            "active_male_patients_percent"
+          ]
+        },
+        {
+          "section": "active_patients",
+          "report_indicators": [
+            "active_patients",
+            "active_female_patients",
+            "active_female_patients_percent",
+            "active_male_patients",
+            "active_male_patients_percent"
+          ]
+        },
+        {
+          "section": "enrolled_patients",
+          "report_indicators": ["enrolled_patients"]
+        },
+        {
+          "section": "active_patients",
+          "report_indicators": [
+            "active_patients",
+            "active_female_patients",
+            "active_female_patients_percent",
+            "active_male_patients",
+            "active_male_patients_percent"
+          ]
+        },
+        {
+          "section": "active_patients",
+          "report_indicators": [
+            "active_patients_below_20",
+            "active_patients_btwn_21_30",
+            "active_patients_btwn_31_40",
+            "active_patients_btwn_41_50",
+            "active_patients_btwn_51_60",
+            "active_patients_btwn_61_70",
+            "active_patients_above_70"
+          ]
+        },
+        {
+          "section": "active_female_patients",
+          "report_indicators": [
+            "active_female_patients_below_20",
+            "active_female_patients_below_20_percent",
+            "active_female_patients_btwn_21_30",
+            "active_female_patients_btwn_21_30percent",
+            "active_female_patients_btwn_31_40",
+            "active_female_patients_btwn_31_40_percent",
+            "active_female_patients_btwn_41_50",
+            "active_female_patients_btwn_41_50percent",
+            "active_female_patients_btwn_51_60",
+            "active_female_patients_btwn_51_60_percent",
+            "active_female_patients_btwn_61_70",
+            "active_female_patients_btwn_61_70_percent",
+            "active_female_patients_above_70",
+            "active_female_patients_above_70_percent"
+          ]
+        },
+        {
+          "section": "active_male_patients",
+          "report_indicators": [
+            "active_male_patients_below_20",
+            "active_male_patients_below_20_percent",
+            "active_male_patients_btwn_21_30",
+            "active_male_patients_btwn_21_30percent",
+            "active_male_patients_btwn_31_40",
+            "active_male_patients_btwn_31_40percent",
+            "active_male_patients_btwn_41_50",
+            "active_male_patients_btwn_41_50percent",
+            "active_male_patients_btwn_51_60",
+            "active_male_patients_btwn_51_60percent",
+            "active_male_patients_btwn_61_70",
+            "active_male_patients_btwn_61_70_percent",
+            "active_male_patients_above_70",
+            "active_male_patients_above_70_percent"
+          ]
+        },
+        {
+          "section": "Burkitt",
+          "report_indicators": [
+            "Burkitt",
+            "Burkitt_female",
+            "Burkitt_female_percent",
+            "Burkitt_male",
+            "Burkitt_male_percent"
+          ]
+        },
+        {
+          "section": "Hodgkin",
+          "report_indicators": [
+            "Hodgkin",
+            "Hodgkin_female",
+            "Hodgkin_female_percent",
+            "Hodgkin_male",
+            "Hodgkin_male_percent"
+          ]
+        },
+        {
+          "section": "Other_lympoma_cancer",
+          "report_indicators": [
+            "Other_lympoma_cancer",
+            "Other_lympoma_cancer_female",
+            "Other_lympoma_cancer_female_percent",
+            "Other_lympoma_cancer_male",
+            "Other_lympoma_cancer_male_percent"
+          ]
+        },
+        {
+          "section": "Squamous_cell_NOS",
+          "report_indicators": [
+            "Squamous_cell_NOS",
+            "Squamous_cell_NOS_female",
+            "Squamous_cell_NOS_female_percent",
+            "Squamous_cell_NOS_male",
+            "Squamous_cell_NOS_male_percent"
+          ]
+        },
+        {
+          "section": "abdomenal_exam_done",
+          "report_indicators": [
+            "abdomenal_exam_done",
+            "abdomenal_exam_done_percent",
+            "abdomenexam_abnormal",
+            "abdomenexam_abnormal_female",
+            "abdomenexam_abnormal_female_percent",
+            "abdomenexam_abnormal_male",
+            "abdomenexam_abnormal_male_percent"
+          ]
+        },
+        {
+          "section": "abdomenexam_normal",
+          "report_indicators": [
+            "abdomenexam_normal",
+            "abdomenexam_normal_female",
+            "abdomenexam_normal_female_percent",
+            "abdomenexam_normal_male",
+            "abdomenexam_normal_male_percent"
+          ]
+        },
+        {
+          "section": "abdomenexam_notdone",
+          "report_indicators": [
+            "abdomenexam_notdone",
+            "abdomenexam_notdone_female",
+            "abdomenexam_notdone_female_percent",
+            "abdomenexam_notdone_male",
+            "abdomenexam_notdone_male_percent",
+            "abdomenexam_notdone_percent"
+          ]
+        },
+        {
+          "section": "acute_lyphocytic_leukemia",
+          "report_indicators": [
+            "acute_lyphocytic_leukemia",
+            "acute_lyphocytic_leukemia_female",
+            "acute_lyphocytic_leukemia_female_percent",
+            "acute_lyphocytic_leukemia_male",
+            "acute_lyphocytic_leukemia_male_percent",
+            "acute_myelogenous_leukemia",
+            "acute_myelogenous_leukemia_female",
+            "acute_myelogenous_leukemia_female_percent",
+            "acute_myelogenous_leukemia_male",
+            "acute_myelogenous_leukemia_male_percent"
+          ]
+        },
+        {
+          "section": "deceased",
+          "report_indicators": [
+            "deceased",
+            "deceased_female",
+            "deceased_female_percent",
+            "deceased_male",
+            "deceased_male_percent"
+          ]
+        },
+        {
+          "section": "Burkitt",
+          "report_indicators": [
+            "Burkitt",
+            "Burkitt_female",
+            "Burkitt_female_percent",
+            "Burkitt_male",
+            "Burkitt_male_percent"
+          ]
+        },
+        {
+          "section": "Hodgkin",
+          "report_indicators": [
+            "Hodgkin",
+            "Hodgkin_female",
+            "Hodgkin_female_percent",
+            "Hodgkin_male",
+            "Hodgkin_male_percent"
+          ]
+        },
+        {
+          "section": "Other_lympoma_cancer",
+          "report_indicators": [
+            "Other_lympoma_cancer",
+            "Other_lympoma_cancer_female",
+            "Other_lympoma_cancer_female_percent",
+            "Other_lympoma_cancer_male",
+            "Other_lympoma_cancer_male_percent"
+          ]
+        },
+        {
+          "section": "Squamous_cell_NOS",
+          "report_indicators": [
+            "Squamous_cell_NOS",
+            "Squamous_cell_NOS_female",
+            "Squamous_cell_NOS_female_percent",
+            "Squamous_cell_NOS_male",
+            "Squamous_cell_NOS_male_percent"
+          ]
+        },
+        {
+          "section": "abdomenal_exam_done",
+          "report_indicators": [
+            "abdomenal_exam_done",
+            "abdomenal_exam_done_percent",
+            "abdomenexam_abnormal",
+            "abdomenexam_abnormal_female",
+            "abdomenexam_abnormal_female_percent",
+            "abdomenexam_abnormal_male",
+            "abdomenexam_abnormal_male_percent"
+          ]
+        },
+        {
+          "section": "abdomenexam_normal",
+          "report_indicators": [
+            "abdomenexam_normal",
+            "abdomenexam_normal_female",
+            "abdomenexam_normal_female_percent",
+            "abdomenexam_normal_male",
+            "abdomenexam_normal_male_percent"
+          ]
+        },
+        {
+          "section": "abdomenexam_notdone",
+          "report_indicators": [
+            "abdomenexam_notdone",
+            "abdomenexam_notdone_female",
+            "abdomenexam_notdone_female_percent",
+            "abdomenexam_notdone_male",
+            "abdomenexam_notdone_male_percent",
+            "abdomenexam_notdone_percent"
+          ]
+        },
+        {
+          "section": "acute_lyphocytic_leukemia",
+          "report_indicators": [
+            "acute_lyphocytic_leukemia",
+            "acute_lyphocytic_leukemia_female",
+            "acute_lyphocytic_leukemia_female_percent",
+            "acute_lyphocytic_leukemia_male",
+            "acute_lyphocytic_leukemia_male_percent",
+            "acute_myelogenous_leukemia",
+            "acute_myelogenous_leukemia_female",
+            "acute_myelogenous_leukemia_female_percent",
+            "acute_myelogenous_leukemia_male",
+            "acute_myelogenous_leukemia_male_percent"
+          ]
+        },
+        {
+          "section": "biopsy_type",
+          "report_indicators": [
+            "biopsy_type_bone_marrow",
+            "biopsy_type_bone_marrow_percentage",
+            "biopsy_type_core_needle",
+            "biopsy_type_core_needle_percentage",
+            "biopsy_type_ct_guided_biopsy",
+            "biopsy_type_ct_guided_biopsy_percentage",
+            "biopsy_type_fna",
+            "biopsy_type_fna_percentage",
+            "biopsy_type_skin_punch",
+            "biopsy_type_skin_punch_percentage",
+            "biopsy_type_ultrasound_guided",
+            "biopsy_type_ultrasound_guided_percentage"
+          ]
+        },
+        {
+          "section": "biopsy_type_bone_marrow",
+          "report_indicators": [
+            "biopsy_type_bone_marrow_female",
+            "biopsy_type_bone_marrow_female_percent",
+            "biopsy_type_bone_marrow_male",
+            "biopsy_type_bone_marrow_male_percent"
+          ]
+        },
+        {
+          "section": "biopsy_type_core_needle",
+          "report_indicators": [
+            "biopsy_type_core_needle_female",
+            "biopsy_type_core_needle_female_percent",
+            "biopsy_type_core_needle_male",
+            "biopsy_type_core_needle_male_percent"
+          ]
+        },
+        {
+          "section": "biopsy_type_ct_guided_biopsy",
+          "report_indicators": [
+            "biopsy_type_ct_guided_biopsy_female",
+            "biopsy_type_ct_guided_biopsy_female_percent",
+            "biopsy_type_ct_guided_biopsy_male",
+            "biopsy_type_ct_guided_biopsy_male_percent"
+          ]
+        },
+        {
+          "section": "biopsy_type_excisional",
+          "report_indicators": [
+            "biopsy_type_excisional_female",
+            "biopsy_type_excisional_female_percent",
+            "biopsy_type_excisional_male",
+            "biopsy_type_excisional_male_percent",
+            "biopsy_type_excisional_percentage"
+          ]
+        },
+        {
+          "section": "biopsy_type_fna",
+          "report_indicators": [
+            "biopsy_type_fna_female",
+            "biopsy_type_fna_female_percent",
+            "biopsy_type_fna_male",
+            "biopsy_type_fna_male_percent"
+          ]
+        },
+        {
+          "section": "biopsy_type_skin_punch",
+          "report_indicators": [
+            "biopsy_type_skin_punch",
+            "biopsy_type_skin_punch_female",
+            "biopsy_type_skin_punch_female_percent",
+            "biopsy_type_skin_punch_male",
+            "biopsy_type_skin_punch_male_percent"
+          ]
+        },
+        {
+          "section": "biopsy_type_ultrasound_guided",
+          "report_indicators": [
+            "biopsy_type_ultrasound_guided_female",
+            "biopsy_type_ultrasound_guided_female_percent",
+            "biopsy_type_ultrasound_guided_male",
+            "biopsy_type_ultrasound_guided_male_percent"
+          ]
+        },
+        {
+          "section": "bladder_cancer",
+          "report_indicators": [
+            "bladder_cancer_female",
+            "bladder_cancer_female_percent",
+            "bladder_cancer_male",
+            "bladder_cancer_male_percent"
+          ]
+        },
+        {
+          "section": "breast_exam_note_done",
+          "report_indicators": [
+            "breast_exam_note_done_female",
+            "breast_exam_note_done_female_percent",
+            "breast_exam_note_done_male",
+            "breast_exam_note_done_male_percent",
+            "breast_exam_note_done_percent"
+          ]
+        },
+        {
+          "section": "breast_cancer",
+          "report_indicators": [
+            "breast_cancer",
+            "breast_cancer_female",
+            "breast_cancer_female_percent",
+            "breast_cancer_male",
+            "breast_cancer_male_percent"
+          ]
+        },
+        {
+          "section": "anal_cancer",
+          "report_indicators": [
+            "anal_cancer",
+            "anal_cancer_female",
+            "anal_cancer_female_percent",
+            "anal_cancer_male",
+            "anal_cancer_male_percent"
+          ]
+        },
+        {
+          "section": "anaplastic_anemia",
+          "report_indicators": [
+            "anaplastic_anemia",
+            "anaplastic_anemia_female",
+            "anaplastic_anemia_female_percent",
+            "anaplastic_anemia_male",
+            "anaplastic_anemia_male_percent"
+          ]
+        },
+        {
+          "section": "aplastic_anemia",
+          "report_indicators": [
+            "aplastic_anemia",
+            "aplastic_anemia_female",
+            "aplastic_anemia_female_percent",
+            "aplastic_anemia_male",
+            "aplastic_anemia_male_percent"
+          ]
+        },
+        {
+          "section": "basal_cell",
+          "report_indicators": [
+            "basal_cell",
+            "basal_cell_female",
+            "basal_cell_female_percent",
+            "basal_cell_male",
+            "basal_cell_male_percent"
+          ]
+        },
+        {
+          "section": "breast_findings",
+          "report_indicators": ["breast_findings_abnormal"]
+        },
+        {
+          "section": "breast_findings_abnormal",
+          "report_indicators": [
+            "breast_findings_abnormal_female",
+            "breast_findings_abnormal_female_percent",
+            "breast_findings_abnormal_male",
+            "breast_findings_abnormal_male_percent",
+            "breast_findings_abnormal_percent"
+          ]
+        },
+        {
+          "section": "breast_findings_location_cyclic",
+          "report_indicators": [
+            "breast_findings_location_cyclic",
+            "breast_findings_location_cyclic_female",
+            "breast_findings_location_cyclic_female_percent",
+            "breast_findings_location_cyclic_male",
+            "breast_findings_location_cyclic_male_percent",
+            "breast_findings_location_cyclic_percent"
+          ]
+        },
+        {
+          "section": "breast_findings_location_left",
+          "report_indicators": [
+            "breast_findings_location_left",
+            "breast_findings_location_left_female",
+            "breast_findings_location_left_female_percent",
+            "breast_findings_location_left_male",
+            "breast_findings_location_left_male_percent",
+            "breast_findings_location_left_percent",
+            "breast_findings_location_right",
+            "breast_findings_location_right_female",
+            "breast_findings_location_right_female_percent",
+            "breast_findings_location_right_male",
+            "breast_findings_location_right_male_percent",
+            "breast_findings_location_right_percent",
+            "breast_findings_normal",
+            "breast_findings_normal_female",
+            "breast_findings_normal_female_percent",
+            "breast_findings_normal_male",
+            "breast_findings_normal_male_percent",
+            "breast_findings_normal_percent"
+          ]
+        },
+        {
+          "section": "cervical",
+          "report_indicators": [
+            "cervical",
+            "cervical_above_70",
+            "cervical_above_70_percent",
+            "cervical_below_20",
+            "cervical_below_20_percent",
+            "cervical_btwn_21_30",
+            "cervical_btwn_21_30_percent",
+            "cervical_btwn_31_40",
+            "cervical_btwn_31_40_percent",
+            "cervical_btwn_41_50",
+            "cervical_btwn_41_50_percent",
+            "cervical_btwn_51_60",
+            "cervical_btwn_51_60_percent",
+            "cervical_btwn_61_70",
+            "cervical_btwn_61_70_percent"
+          ]
+        },
+        {
+          "section": "chemotherapy_treatment_plan",
+          "report_indicators": [
+            "chemotherapy",
+            "chemotherapy_female",
+            "chemotherapy_female_percent",
+            "chemotherapy_male",
+            "chemotherapy_male_percent"
+          ]
+        },
+        {
+          "section": "chest_exam_not_done",
+          "report_indicators": [
+            "chest_exam_abnormal",
+            "chest_exam_normal",
+            "chest_exam_not_done"
+          ]
+        },
+        {
+          "section": "cholangiocarcinoma",
+          "report_indicators": [
+            "cholangiocarcinoma",
+            "cholangiocarcinoma_female",
+            "cholangiocarcinoma_female_percent",
+            "cholangiocarcinoma_male",
+            "cholangiocarcinoma_male_percent"
+          ]
+        },
+        {
+          "section": "choriocarcinoma",
+          "report_indicators": [
+            "choriocarcinoma",
+            "choriocarcinoma_above_70",
+            "choriocarcinoma_above_70_percent",
+            "choriocarcinoma_below_20",
+            "choriocarcinoma_below_20_percent",
+            "choriocarcinoma_btwn_21_30",
+            "choriocarcinoma_btwn_21_30_percent",
+            "choriocarcinoma_btwn_31_40",
+            "choriocarcinoma_btwn_31_40_percent",
+            "choriocarcinoma_btwn_41_50",
+            "choriocarcinoma_btwn_41_50_percent",
+            "choriocarcinoma_btwn_51_60",
+            "choriocarcinoma_btwn_51_60_percent",
+            "choriocarcinoma_btwn_61_70",
+            "choriocarcinoma_btwn_61_70_percent"
+          ]
+        },
+        {
+          "section": "chronic_lymphocytic_leukemia",
+          "report_indicators": [
+            "chronic_lymphocytic_leukemia",
+            "chronic_lymphocytic_leukemia_female",
+            "chronic_lymphocytic_leukemia_female_percent",
+            "chronic_lymphocytic_leukemia_male",
+            "chronic_lymphocytic_leukemia_male_percent"
+          ]
+        },
+        {
+          "section": "chronic_myelogenous_leukemia",
+          "report_indicators": [
+            "chronic_myelogenous_leukemia",
+            "chronic_myelogenous_leukemia_female",
+            "chronic_myelogenous_leukemia_female_percent",
+            "chronic_myelogenous_leukemia_male",
+            "chronic_myelogenous_leukemia_male_percent"
+          ]
+        },
+        {
+          "section": "colon_cancer",
+          "report_indicators": [
+            "colon_cancer",
+            "colon_cancer_female",
+            "colon_cancer_female_percent",
+            "colon_cancer_male",
+            "colon_cancer_male_percent"
+          ]
+        },
+        {
+          "section": "diagnosis_method",
+          "report_indicators": [
+            "diagnosis_method_biopsy",
+            "diagnosis_method_biopsy_percent",
+            "diagnosis_method_bone_marrow_aspiration",
+            "diagnosis_method_bone_marrow_aspiration_percent"
+          ]
+        },
+        {
+          "section": "diagnosis_method_biopsy",
+          "report_indicators": [
+            "diagnosis_method_biopsy_female",
+            "diagnosis_method_biopsy_female_percent",
+            "diagnosis_method_biopsy_male",
+            "diagnosis_method_biopsy_male_percent",
+            "diagnosis_method_clinically",
+            "diagnosis_method_clinically_percent",
+            "diagnosis_method_lab_findingsreview",
+            "diagnosis_method_lab_findingsreview_percent",
+            "diagnosis_method_peripheral_blood_film",
+            "diagnosis_method_peripheral_blood_film_percent",
+            "diagnosis_method_priorclinicalrecords",
+            "diagnosis_method_priorclinicalrecords_percent"
+          ]
+        },
+        {
+          "section": "diagnosis_method_bone_marrow_aspiration",
+          "report_indicators": [
+            "diagnosis_method_bone_marrow_aspiration_female",
+            "diagnosis_method_bone_marrow_aspiration_female_percent",
+            "diagnosis_method_bone_marrow_aspiration_male",
+            "diagnosis_method_bone_marrow_aspiration_male_percent"
+          ]
+        },
+        {
+          "section": "diagnosis_method_clinically",
+          "report_indicators": [
+            "diagnosis_method_clinically",
+            "diagnosis_method_clinically_female",
+            "diagnosis_method_clinically_female_percent",
+            "diagnosis_method_clinically_male",
+            "diagnosis_method_clinically_male_percent",
+            "diagnosis_method_clinically_percent"
+          ]
+        },
+        {
+          "section": "diagnosis_method_lab_findingsreview",
+          "report_indicators": [
+            "diagnosis_method_lab_findingsreview",
+            "diagnosis_method_lab_findingsreview_female",
+            "diagnosis_method_lab_findingsreview_female_percent",
+            "diagnosis_method_lab_findingsreview_male",
+            "diagnosis_method_lab_findingsreview_male_percent",
+            "diagnosis_method_lab_findingsreview_percent"
+          ]
+        },
+        {
+          "section": "diagnosis_method_peripheral_blood_film",
+          "report_indicators": [
+            "diagnosis_method_peripheral_blood_film",
+            "diagnosis_method_peripheral_blood_film_female",
+            "diagnosis_method_peripheral_blood_film_female_percent",
+            "diagnosis_method_peripheral_blood_film_male",
+            "diagnosis_method_peripheral_blood_film_male_percent",
+            "diagnosis_method_peripheral_blood_film_percent"
+          ]
+        },
+        {
+          "section": "diagnosis_method_priorclinicalrecords",
+          "report_indicators": [
+            "diagnosis_method_priorclinicalrecords",
+            "diagnosis_method_priorclinicalrecords_female",
+            "diagnosis_method_priorclinicalrecords_female_percent",
+            "diagnosis_method_priorclinicalrecords_male",
+            "diagnosis_method_priorclinicalrecords_male_percent",
+            "diagnosis_method_priorclinicalrecords_percent"
+          ]
+        },
+        {
+          "section": "ductal_cell_carcinoma",
+          "report_indicators": [
+            "ductal_cell_carcinoma",
+            "ductal_cell_carcinoma_female",
+            "ductal_cell_carcinoma_female_percent",
+            "ductal_cell_carcinoma_male",
+            "ductal_cell_carcinoma_male_percent"
+          ]
+        },
+        {
+          "section": "ecog_performance_debilated_half_day_bedridden",
+          "report_indicators": [
+            "ecog_performance_debilated_half_day_bedridden",
+            "ecog_performance_debilated_half_day_bedridden_female",
+            "ecog_performance_debilated_half_day_bedridden_female_percent",
+            "ecog_performance_debilated_half_day_bedridden_male",
+            "ecog_performance_debilated_half_day_bedridden_male_percent"
+          ]
+        },
+        {
+          "section": "ecog_performance_debilated_more_than_half_day_bedridden",
+          "report_indicators": [
+            "ecog_performance_debilated_more_than_half_day_bedridden",
+            "ecog_performance_debilated_more_than_half_day_bedridden_female",
+            "ecog_performance_debilated_more_than_half_day_bedridden_female_percent",
+            "ecog_performance_debilated_more_than_half_day_bedridden_male",
+            "ecog_performance_debilated_more_than_half_day_bedridden_male_percent"
+          ]
+        },
+        {
+          "section": "ecog_performance_fully_bedridden",
+          "report_indicators": [
+            "ecog_performance_fully_bedridden",
+            "ecog_performance_fully_bedridden_female",
+            "ecog_performance_fully_bedridden_female_percent",
+            "ecog_performance_fully_bedridden_male",
+            "ecog_performance_fully_bedridden_male_percent"
+          ]
+        },
+        {
+          "section": "ecog_performance_normal_symtomatic_ambulatory",
+          "report_indicators": [
+            "ecog_performance_normal_symtomatic_ambulatory",
+            "ecog_performance_normal_symtomatic_ambulatory_female",
+            "ecog_performance_normal_symtomatic_ambulatory_female_percent",
+            "ecog_performance_normal_symtomatic_ambulatory_male",
+            "ecog_performance_normal_symtomatic_ambulatory_male_percent"
+          ]
+        },
+        {
+          "section": "esophageal",
+          "report_indicators": [
+            "esophageal",
+            "esophageal_female",
+            "esophageal_female_percent",
+            "esophageal_male",
+            "esophageal_male_percent"
+          ]
+        },
+        {
+          "section": "ewings_sarcoma",
+          "report_indicators": [
+            "ewings_sarcoma",
+            "ewings_sarcoma_female",
+            "ewings_sarcoma_female_percent",
+            "ewings_sarcoma_male",
+            "ewings_sarcoma_male_percent"
+          ]
+        },
+        {
+          "section": "family_planning_referral",
+          "report_indicators": [
+            "family_planning_referral",
+            "family_planning_referral_female",
+            "family_planning_referral_female_percent",
+            "family_planning_referral_male",
+            "family_planning_referral_male_percent"
+          ]
+        },
+        {
+          "section": "feeling_well",
+          "report_indicators": [
+            "feeling_well",
+            "feeling_well_female",
+            "feeling_well_female_percent",
+            "feeling_well_male",
+            "feeling_well_male_percent"
+          ]
+        },
+        {
+          "section": "gastric_cancer",
+          "report_indicators": [
+            "gastric_cancer",
+            "gastric_cancer_female",
+            "gastric_cancer_female_percent",
+            "gastric_cancer_male",
+            "gastric_cancer_male_percent"
+          ]
+        },
+        {
+          "section": "general_exam_cyanosis",
+          "report_indicators": [
+            "general_exam_cyanosis",
+            "general_exam_cyanosis_female",
+            "general_exam_cyanosis_female_percent",
+            "general_exam_cyanosis_male",
+            "general_exam_cyanosis_male_percent"
+          ]
+        },
+        {
+          "section": "general_exam_dehydration",
+          "report_indicators": [
+            "general_exam_dehydration",
+            "general_exam_dehydration_female",
+            "general_exam_dehydration_female_percent",
+            "general_exam_dehydration_male",
+            "general_exam_dehydration_male_percent"
+          ]
+        },
+        {
+          "section": "general_exam_done",
+          "report_indicators": [
+            "general_exam_done",
+            "general_exam_done_percent"
+          ]
+        },
+        {
+          "section": "general_exam_edema",
+          "report_indicators": [
+            "general_exam_edema",
+            "general_exam_edema_female",
+            "general_exam_edema_female_percent",
+            "general_exam_edema_male",
+            "general_exam_edema_male_percent"
+          ]
+        },
+        {
+          "section": "general_exam_fatique",
+          "report_indicators": [
+            "general_exam_fatique",
+            "general_exam_fatique_female",
+            "general_exam_fatique_female_percent",
+            "general_exam_fatique_male",
+            "general_exam_fatique_male_percent"
+          ]
+        },
+        {
+          "section": "general_exam_jaundice",
+          "report_indicators": [
+            "general_exam_jaundice",
+            "general_exam_jaundice_female",
+            "general_exam_jaundice_female_percent",
+            "general_exam_jaundice_male",
+            "general_exam_jaundice_male_percent"
+          ]
+        },
+        {
+          "section": "general_exam_night_sweats",
+          "report_indicators": [
+            "general_exam_night_sweats",
+            "general_exam_night_sweats_female",
+            "general_exam_night_sweats_female_percent",
+            "general_exam_night_sweats_male",
+            "general_exam_night_sweats_male_percent"
+          ]
+        },
+        {
+          "section": "general_exam_normal",
+          "report_indicators": [
+            "general_exam_normal",
+            "general_exam_normal_percent"
+          ]
+        },
+        {
+          "section": "general_exam_not_done",
+          "report_indicators": [
+            "general_exam_not_done",
+            "general_exam_not_done_female",
+            "general_exam_not_done_female_percent",
+            "general_exam_not_done_male",
+            "general_exam_not_done_male_percent",
+            "general_exam_not_done_percent"
+          ]
+        },
+        {
+          "section": "general_exam_other",
+          "report_indicators": [
+            "general_exam_other",
+            "general_exam_other_female",
+            "general_exam_other_female_percent",
+            "general_exam_other_male",
+            "general_exam_other_male_percent"
+          ]
+        },
+        {
+          "section": "general_exam_pains",
+          "report_indicators": [
+            "general_exam_pains",
+            "general_exam_pains_female",
+            "general_exam_pains_female_percent",
+            "general_exam_pains_male",
+            "general_exam_pains_male_percent"
+          ]
+        },
+        {
+          "section": "general_exam_pallor",
+          "report_indicators": [
+            "general_exam_pallor",
+            "general_exam_pallor_female",
+            "general_exam_pallor_female_percent",
+            "general_exam_pallor_male",
+            "general_exam_pallor_male_percent"
+          ]
+        },
+        {
+          "section": "general_exam_temporal_wasting",
+          "report_indicators": [
+            "general_exam_temporal_wasting",
+            "general_exam_temporal_wasting_female",
+            "general_exam_temporal_wasting_female_percent",
+            "general_exam_temporal_wasting_male",
+            "general_exam_temporal_wasting_male_percent"
+          ]
+        },
+        {
+          "section": "general_exam_weight_loss",
+          "report_indicators": [
+            "general_exam_weight_loss",
+            "general_exam_weight_loss_female",
+            "general_exam_weight_loss_female_percent",
+            "general_exam_weight_loss_male",
+            "general_exam_weight_loss_male_percent"
+          ]
+        },
+        {
+          "section": "gi_cancer",
+          "report_indicators": [
+            "gi_cancer",
+            "gi_cancer_female",
+            "gi_cancer_female_percent",
+            "gi_cancer_male",
+            "gi_cancer_male_percent"
+          ]
+        },
+        {
+          "section": "gu_cancer",
+          "report_indicators": [
+            "gu_cancer",
+            "gu_cancer_female",
+            "gu_cancer_female_percent",
+            "gu_cancer_male",
+            "gu_cancer_male_percent"
+          ]
+        },
+        {
+          "section": "gynecological_cancer",
+          "report_indicators": [
+            "gynecological_cancer",
+            "gynecological_cancer_above_70",
+            "gynecological_cancer_below_20",
+            "gynecological_cancer_below_20_percent",
+            "gynecological_cancer_btwn_21_30",
+            "gynecological_cancer_btwn_21_30_percent",
+            "gynecological_cancer_btwn_31_40",
+            "gynecological_cancer_btwn_31_40_percent",
+            "gynecological_cancer_btwn_41_50",
+            "gynecological_cancer_btwn_41_50_percent",
+            "gynecological_cancer_btwn_51_60",
+            "gynecological_cancer_btwn_51_60_percent",
+            "gynecological_cancer_btwn_61_70",
+            "gynecological_cancer_btwn_61_70_percent"
+          ]
+        },
+        {
+          "section": "having_symptoms",
+          "report_indicators": [
+            "having_symptoms",
+            "having_symptoms_female",
+            "having_symptoms_female_percent",
+            "having_symptoms_male",
+            "having_symptoms_male_percent"
+          ]
+        },
+        {
+          "section": "head_neck",
+          "report_indicators": [
+            "head_neck",
+            "head_neck_female",
+            "head_neck_female_percent",
+            "head_neck_male",
+            "head_neck_male_percent"
+          ]
+        },
+        {
+          "section": "heent_hearing_difficulties",
+          "report_indicators": [
+            "heent_hearing_difficulties",
+            "heent_hearing_difficulties_female",
+            "heent_hearing_difficulties_female_percent",
+            "heent_hearing_difficulties_male",
+            "heent_hearing_difficulties_male_percent"
+          ]
+        },
+        {
+          "section": "heent_normal",
+          "report_indicators": [
+            "heent_normal",
+            "heent_normal_female",
+            "heent_normal_female_percent",
+            "heent_normal_male",
+            "heent_normal_male_percent"
+          ]
+        },
+        {
+          "section": "heent_other",
+          "report_indicators": [
+            "heent_other",
+            "heent_other_female",
+            "heent_other_female_percent",
+            "heent_other_male",
+            "heent_other_male_percent"
+          ]
+        },
+        {
+          "section": "heent_swallowing_difficulties",
+          "report_indicators": [
+            "heent_swallowing_difficulties",
+            "heent_swallowing_difficulties_female",
+            "heent_swallowing_difficulties_female_percent",
+            "heent_swallowing_difficulties_male",
+            "heent_swallowing_difficulties_male_percent"
+          ]
+        },
+        {
+          "section": "heent_swelling",
+          "report_indicators": [
+            "heent_swelling",
+            "heent_swelling_female",
+            "heent_swelling_female_percent",
+            "heent_swelling_male",
+            "heent_swelling_male_percent"
+          ]
+        },
+        {
+          "section": "heent_vision_difficulties",
+          "report_indicators": [
+            "heent_vision_difficulties",
+            "heent_vision_difficulties_female",
+            "heent_vision_difficulties_female_percent",
+            "heent_vision_difficulties_male",
+            "heent_vision_difficulties_male_percent"
+          ]
+        },
+        {
+          "section": "hemolytic_anemia",
+          "report_indicators": [
+            "hemolytic_anemia",
+            "hemolytic_anemia_female",
+            "hemolytic_anemia_female_percent",
+            "hemolytic_anemia_male",
+            "hemolytic_anemia_male_percent"
+          ]
+        },
+        {
+          "section": "hepatocellular",
+          "report_indicators": [
+            "hepatocellular",
+            "hepatocellular_female",
+            "hepatocellular_female_percent",
+            "hepatocellular_male",
+            "hepatocellular_male_percent"
+          ]
+        },
+        {
+          "section": "inflammatory",
+          "report_indicators": [
+            "inflammatory",
+            "inflammatory_female",
+            "inflammatory_female_percent",
+            "inflammatory_male",
+            "inflammatory_male_percent"
+          ]
+        },
+        {
+          "section": "iron_deficiency_anemia",
+          "report_indicators": [
+            "iron_deficiency_anemia",
+            "iron_deficiency_anemia_female",
+            "iron_deficiency_anemia_female_percent",
+            "iron_deficiency_anemia_male",
+            "iron_deficiency_anemia_male_percent"
+          ]
+        },
+        {
+          "section": "kaposi_sarcoma",
+          "report_indicators": [
+            "kaposi_sarcoma",
+            "kaposi_sarcoma_female",
+            "kaposi_sarcoma_female_percent",
+            "kaposi_sarcoma_male",
+            "kaposi_sarcoma_male_percent"
+          ]
+        },
+        {
+          "section": "leaukemia",
+          "report_indicators": [
+            "leaukemia",
+            "leaukemia_female",
+            "leaukemia_female_percent",
+            "leaukemia_male",
+            "leaukemia_male_percent"
+          ]
+        },
+        {
+          "section": "location_name",
+          "report_indicators": ["location_name"]
+        },
+        {
+          "section": "lost_to_follow_up",
+          "report_indicators": [
+            "lost_to_follow_up",
+            "lost_to_follow_up_female",
+            "lost_to_follow_up_female_percent",
+            "lost_to_follow_up_male",
+            "lost_to_follow_up_male_percent"
+          ]
+        },
+        {
+          "section": "lung_cancer",
+          "report_indicators": [
+            "lung_cancer",
+            "lung_cancer_female",
+            "lung_cancer_female_percent",
+            "lung_cancer_male",
+            "lung_cancer_male_percent"
+          ]
+        },
+        {
+          "section": "lympoma",
+          "report_indicators": [
+            "lympoma",
+            "lympoma_female",
+            "lympoma_female_percent",
+            "lympoma_male",
+            "lympoma_male_percent"
+          ]
+        },
+        {
+          "section": "melanoma",
+          "report_indicators": [
+            "melanoma",
+            "melanoma_female",
+            "melanoma_female_percent",
+            "melanoma_male",
+            "melanoma_male_percent"
+          ]
+        },
+        {
+          "section": "neuroblastoma",
+          "report_indicators": [
+            "neuroblastoma",
+            "neuroblastoma_female",
+            "neuroblastoma_female_percent",
+            "neuroblastoma_male",
+            "neuroblastoma_male_percent"
+          ]
+        },
+        {
+          "section": "new_cancer",
+          "report_indicators": [
+            "new_cancer",
+            "new_cancer_female",
+            "new_cancer_female_percent",
+            "new_cancer_male",
+            "new_cancer_male_percent"
+          ]
+        },
+        {
+          "section": "no_past_treatment_plan",
+          "report_indicators": [
+            "no_past_treatment_plan",
+            "no_past_treatment_plan_female",
+            "no_past_treatment_plan_female_percent",
+            "no_past_treatment_plan_male",
+            "no_past_treatment_plan_male_percent"
+          ]
+        },
+        {
+          "section": "no_refferal_ordered",
+          "report_indicators": [
+            "no_refferal_ordered",
+            "no_refferal_ordered_female",
+            "no_refferal_ordered_female_percent",
+            "no_refferal_ordered_male",
+            "no_refferal_ordered_male_percent"
+          ]
+        },
+        {
+          "section": "non_cancer",
+          "report_indicators": [
+            "non_cancer",
+            "non_cancer_female",
+            "non_cancer_female_percent",
+            "non_cancer_male",
+            "non_cancer_male_percent"
+          ]
+        },
+        {
+          "section": "non_hodgkin",
+          "report_indicators": [
+            "non_hodgkin",
+            "non_hodgkin_female",
+            "non_hodgkin_female_percent",
+            "non_hodgkin_male",
+            "non_hodgkin_male_percent"
+          ]
+        },
+        {
+          "section": "nutritional_support",
+          "report_indicators": [
+            "nutritional_support",
+            "nutritional_support_female",
+            "nutritional_support_female_percent",
+            "nutritional_support_male",
+            "nutritional_support_male_percent"
+          ]
+        },
+        {
+          "section": "osteogenic_sarcoma",
+          "report_indicators": [
+            "osteogenic_sarcoma",
+            "osteogenic_sarcoma_female",
+            "osteogenic_sarcoma_female_percent",
+            "osteogenic_sarcoma_male",
+            "osteogenic_sarcoma_male_percent"
+          ]
+        },
+        {
+          "section": "other_breast_cancer",
+          "report_indicators": [
+            "other_breast_cancer",
+            "other_breast_cancer_female",
+            "other_breast_cancer_female_percent",
+            "other_breast_cancer_male",
+            "other_breast_cancer_male_percent"
+          ]
+        },
+        {
+          "section": "other_cancer",
+          "report_indicators": [
+            "other_cancer",
+            "other_cancer_female",
+            "other_cancer_female_percent",
+            "other_cancer_male",
+            "other_cancer_male_percent"
+          ]
+        },
+        {
+          "section": "other_gi_cancer",
+          "report_indicators": [
+            "other_gi_cancer",
+            "other_gi_cancer_female",
+            "other_gi_cancer_female_percent",
+            "other_gi_cancer_male",
+            "other_gi_cancer_male_percent"
+          ]
+        },
+        {
+          "section": "other_gu_cancer",
+          "report_indicators": [
+            "other_gu_cancer",
+            "other_gu_cancer_female",
+            "other_gu_cancer_female_percent",
+            "other_gu_cancer_male",
+            "other_gu_cancer_male_percent"
+          ]
+        },
+        {
+          "section": "other_gynecologic_cancer",
+          "report_indicators": [
+            "other_gynecologic_cancer",
+            "other_gynecologic_cancer_above_70",
+            "other_gynecologic_cancer_below_20",
+            "other_gynecologic_cancer_btwn_21_30",
+            "other_gynecologic_cancer_btwn_31_40",
+            "other_gynecologic_cancer_btwn_41_50",
+            "other_gynecologic_cancer_btwn_51_60",
+            "other_gynecologic_cancer_btwn_61_70",
+            "other_gynecologic_cancer_female",
+            "other_gynecologic_cancer_female_percent",
+            "other_gynecologic_cancer_male",
+            "other_gynecologic_cancer_male_percent"
+          ]
+        },
+        {
+          "section": "other_head_and_neck_cancer",
+          "report_indicators": [
+            "other_head_and_neck_cancer",
+            "other_head_and_neck_cancer_female",
+            "other_head_and_neck_cancer_female_percent",
+            "other_head_and_neck_cancer_male",
+            "other_head_and_neck_cancer_male_percent"
+          ]
+        },
+        {
+          "section": "other_leukemia",
+          "report_indicators": [
+            "other_leukemia",
+            "other_leukemia_female",
+            "other_leukemia_female_percent",
+            "other_leukemia_male",
+            "other_leukemia_male_percent"
+          ]
+        },
+        {
+          "section": "other_none_cancer",
+          "report_indicators": [
+            "other_none_cancer",
+            "other_none_cancer_female_percent",
+            "other_none_cancer_male",
+            "other_none_cancerfemale",
+            "other_none_cancermale_percent"
+          ]
+        },
+        {
+          "section": "other_past_treatment",
+          "report_indicators": [
+            "other_past_treatment",
+            "other_past_treatment_female",
+            "other_past_treatment_female_percent",
+            "other_past_treatment_male",
+            "other_past_treatment_male_percent"
+          ]
+        },
+        {
+          "section": "other_referral",
+          "report_indicators": [
+            "other_referral",
+            "other_referral_female",
+            "other_referral_female_percent",
+            "other_referral_male",
+            "other_referral_male_percent"
+          ]
+        },
+        {
+          "section": "other_sarcoma",
+          "report_indicators": [
+            "other_sarcoma",
+            "other_sarcoma_female",
+            "other_sarcoma_female_percent",
+            "other_sarcoma_male",
+            "other_sarcoma_male_percent"
+          ]
+        },
+        {
+          "section": "other_skin_cancer",
+          "report_indicators": [
+            "other_skin_cancer",
+            "other_skin_cancer_female",
+            "other_skin_cancer_female_percent",
+            "other_skin_cancer_male",
+            "other_skin_cancer_male_percent"
+          ]
+        },
+        {
+          "section": "other_solid",
+          "report_indicators": [
+            "other_solid",
+            "other_solid_cancer",
+            "other_solid_cancer_female",
+            "other_solid_cancer_female_percent",
+            "other_solid_cancer_male",
+            "other_solid_cancer_male_percent",
+            "other_solid_female",
+            "other_solid_female_percent",
+            "other_solid_male",
+            "other_solid_male_percent"
+          ]
+        },
+        {
+          "section": "ovarian",
+          "report_indicators": [
+            "ovarian",
+            "ovarian_above_70",
+            "ovarian_above_70_percent",
+            "ovarian_below_20",
+            "ovarian_below_20_percent",
+            "ovarian_btwn_21_30",
+            "ovarian_btwn_21_30_percent",
+            "ovarian_btwn_31_40",
+            "ovarian_btwn_31_40_percent",
+            "ovarian_btwn_41_50",
+            "ovarian_btwn_41_50_percent",
+            "ovarian_btwn_51_60",
+            "ovarian_btwn_51_60_percent",
+            "ovarian_btwn_61_70",
+            "ovarian_btwn_61_70_percent",
+            "ovarian_female",
+            "ovarian_female_percent",
+            "ovarian_male",
+            "ovarian_male_percent"
+          ]
+        },
+        {
+          "section": "palitive_care_referral",
+          "report_indicators": [
+            "palitive_care_referral",
+            "palitive_care_referral_female",
+            "palitive_care_referral_female_percent",
+            "palitive_care_referral_male",
+            "palitive_care_referral_male_percent"
+          ]
+        },
+        {
+          "section": "pancreatic_cancer",
+          "report_indicators": [
+            "pancreatic_cancer",
+            "pancreatic_cancer_female",
+            "pancreatic_cancer_female_percent",
+            "pancreatic_cancer_male",
+            "pancreatic_cancer_male_percent"
+          ]
+        },
+        {
+          "section": "past_treatment_biologicaltherapy",
+          "report_indicators": [
+            "past_treatment_biologicaltherapy",
+            "past_treatment_biologicaltherapy_female",
+            "past_treatment_biologicaltherapy_female_percent",
+            "past_treatment_biologicaltherapy_male",
+            "past_treatment_biologicaltherapy_male_percent"
+          ]
+        },
+        {
+          "section": "past_treatment_chemotherapy",
+          "report_indicators": [
+            "past_treatment_chemotherapy",
+            "past_treatment_chemotherapy_female",
+            "past_treatment_chemotherapy_female_percent",
+            "past_treatment_chemotherapy_male",
+            "past_treatment_chemotherapy_male_percent"
+          ]
+        },
+        {
+          "section": "past_treatment_homonaltherapy",
+          "report_indicators": [
+            "past_treatment_homonaltherapy",
+            "past_treatment_homonaltherapy_female",
+            "past_treatment_homonaltherapy_female_percent",
+            "past_treatment_homonaltherapy_male",
+            "past_treatment_homonaltherapy_male_percent"
+          ]
+        },
+        {
+          "section": "past_treatment_radiationtherapy",
+          "report_indicators": [
+            "past_treatment_radiationtherapy",
+            "past_treatment_radiationtherapy_female",
+            "past_treatment_radiationtherapy_female_percent",
+            "past_treatment_radiationtherapy_male",
+            "past_treatment_radiationtherapy_male_percent"
+          ]
+        },
+        {
+          "section": "past_treatment_surgery",
+          "report_indicators": [
+            "past_treatment_surgery",
+            "past_treatment_surgery_female",
+            "past_treatment_surgery_female_percent",
+            "past_treatment_surgery_male",
+            "past_treatment_surgery_male_percent"
+          ]
+        },
+        {
+          "section": "past_treatment_targetedtherapies",
+          "report_indicators": [
+            "past_treatment_targetedtherapies",
+            "past_treatment_targetedtherapies_female",
+            "past_treatment_targetedtherapies_female_percent",
+            "past_treatment_targetedtherapies_male",
+            "past_treatment_targetedtherapies_male_percent"
+          ]
+        },
+        {
+          "section": "past_treatment_traditionalmedicine",
+          "report_indicators": [
+            "past_treatment_traditionalmedicine",
+            "past_treatment_traditionalmedicine_female",
+            "past_treatment_traditionalmedicine_female_percent",
+            "past_treatment_traditionalmedicine_male",
+            "past_treatment_traditionalmedicine_male_percent"
+          ]
+        },
+        {
+          "section": "patient_condition_fair",
+          "report_indicators": [
+            "patient_condition_fair",
+            "patient_condition_fair_female",
+            "patient_condition_fair_female_percent",
+            "patient_condition_fair_male",
+            "patient_condition_fair_male_percent"
+          ]
+        },
+        {
+          "section": "patient_condition_sick_looking",
+          "report_indicators": [
+            "patient_condition_sick_looking",
+            "patient_condition_sick_looking_female",
+            "patient_condition_sick_looking_female_percent",
+            "patient_condition_sick_looking_male",
+            "patient_condition_sick_looking_male_percent"
+          ]
+        },
+        {
+          "section": "penile_cancer",
+          "report_indicators": [
+            "penile_cancer",
+            "penile_cancer_above_70",
+            "penile_cancer_below_20",
+            "penile_cancer_below_20_percent",
+            "penile_cancer_btwn_21_30",
+            "penile_cancer_btwn_21_30_percent",
+            "penile_cancer_btwn_31_40",
+            "penile_cancer_btwn_31_40_percent",
+            "penile_cancer_btwn_41_50",
+            "penile_cancer_btwn_41_50_percent",
+            "penile_cancer_btwn_51_60",
+            "penile_cancer_btwn_51_60_percent",
+            "penile_cancer_btwn_61_70",
+            "penile_cancer_btwn_61_70_percent"
+          ]
+        },
+        {
+          "section": "physical_therapy_referral",
+          "report_indicators": [
+            "physical_therapy_referral",
+            "physical_therapy_referral_female",
+            "physical_therapy_referral_female_percent",
+            "physical_therapy_referral_male",
+            "physical_therapy_referral_male_percent"
+          ]
+        },
+        {
+          "section": "prostate_cancer",
+          "report_indicators": [
+            "prostate",
+            "prostate_above_70",
+            "prostate_below_20",
+            "prostate_below_20_percent",
+            "prostate_btwn_21_30",
+            "prostate_btwn_21_30_percent",
+            "prostate_btwn_31_40",
+            "prostate_btwn_31_40_percent",
+            "prostate_btwn_41_50",
+            "prostate_btwn_41_50_percent",
+            "prostate_btwn_51_60",
+            "prostate_btwn_51_60_percent",
+            "prostate_btwn_61_70",
+            "prostate_btwn_61_70_percent"
+          ]
+        },
+        {
+          "section": "purpose_of_visit_initial",
+          "report_indicators": [
+            "purpose_of_visit_initial",
+            "purpose_of_visit_initial_female",
+            "purpose_of_visit_initial_female_percent",
+            "purpose_of_visit_initial_male",
+            "purpose_of_visit_initial_male_percent"
+          ]
+        },
+        {
+          "section": "purpose_of_visit_return",
+          "report_indicators": [
+            "purpose_of_visit_return",
+            "purpose_of_visit_return_female",
+            "purpose_of_visit_return_female_percent",
+            "purpose_of_visit_return_male",
+            "purpose_of_visit_return_male_percent"
+          ]
+        },
+        {
+          "section": "radiationtherapy_female",
+          "report_indicators": [
+            "radiationtherapy_female",
+            "radiationtherapy_female_percent",
+            "radiationtherapy_male",
+            "radiationtherapy_male_percent"
+          ]
+        },
+        {
+          "section": "radiotherapy",
+          "report_indicators": [
+            "radiotherapy",
+            "radiotherapy_referral",
+            "radiotherapy_referral_female",
+            "radiotherapy_referral_female_percent",
+            "radiotherapy_referral_male",
+            "radiotherapy_referral_male_percent"
+          ]
+        },
+        {
+          "section": "rectal_cancer",
+          "report_indicators": [
+            "rectal_cancer",
+            "rectal_cancer_female",
+            "rectal_cancer_female_percent",
+            "rectal_cancer_male",
+            "rectal_cancer_male_percent"
+          ]
+        },
+        {
+          "section": "recurrence_cancer",
+          "report_indicators": [
+            "recurrence_cancer",
+            "recurrence_cancer_female",
+            "recurrence_cancer_female_percent",
+            "recurrence_cancer_male",
+            "recurrence_cancer_male_percent"
+          ]
+        },
+        {
+          "section": "renal_cell_cancer",
+          "report_indicators": [
+            "renal_cell_cancer",
+            "renal_cell_cancer_female",
+            "renal_cell_cancer_female_percent",
+            "renal_cell_cancer_male",
+            "renal_cell_cancer_male_percent"
+          ]
+        },
+        {
+          "section": "retinoblastoma",
+          "report_indicators": [
+            "retinoblastoma",
+            "retinoblastoma_female",
+            "retinoblastoma_female_percent",
+            "retinoblastoma_male",
+            "retinoblastoma_male_percent"
+          ]
+        },
+        {
+          "section": "rhabdomyo",
+          "report_indicators": [
+            "rhabdomyo",
+            "rhabdomyo_female",
+            "rhabdomyo_female_percent",
+            "rhabdomyo_male",
+            "rhabdomyo_male_percent"
+          ]
+        },
+        {
+          "section": "sarcoma",
+          "report_indicators": [
+            "sarcoma",
+            "sarcoma_female",
+            "sarcoma_female_percent",
+            "sarcoma_male",
+            "sarcoma_male_percent"
+          ]
+        },
+        {
+          "section": "skin_cancer",
+          "report_indicators": [
+            "skin_cancer",
+            "skin_cancer_female",
+            "skin_cancer_female_percent",
+            "skin_cancer_male",
+            "skin_cancer_male_percent"
+          ]
+        },
+        {
+          "section": "social_worker_referral",
+          "report_indicators": [
+            "social_worker_referral",
+            "social_worker_referral_female",
+            "social_worker_referral_female_percent",
+            "social_worker_referral_male",
+            "social_worker_referral_male_percent"
+          ]
+        },
+        {
+          "section": "soft_tissue_sarcoma",
+          "report_indicators": [
+            "soft_tissue_sarcoma",
+            "soft_tissue_sarcoma_female",
+            "soft_tissue_sarcoma_female_percent",
+            "soft_tissue_sarcoma_male",
+            "soft_tissue_sarcoma_male_percent"
+          ]
+        },
+        {
+          "section": "squamous_cell",
+          "report_indicators": [
+            "squamous_cell",
+            "squamous_cell_female",
+            "squamous_cell_female_percent",
+            "squamous_cell_male",
+            "squamous_cell_male_percent"
+          ]
+        },
+        {
+          "section": "squamous_cell_hypopharynx",
+          "report_indicators": [
+            "squamous_cell_hypopharynx",
+            "squamous_cell_hypopharynx_female",
+            "squamous_cell_hypopharynx_female_percent",
+            "squamous_cell_hypopharynx_male",
+            "squamous_cell_hypopharynx_male_percent"
+          ]
+        },
+        {
+          "section": "squamous_cell_laryngeal",
+          "report_indicators": [
+            "squamous_cell_laryngeal",
+            "squamous_cell_laryngeal_female",
+            "squamous_cell_laryngeal_female_percent",
+            "squamous_cell_laryngeal_male",
+            "squamous_cell_laryngeal_male_percent"
+          ]
+        },
+        {
+          "section": "squamous_cell_nasopharynx",
+          "report_indicators": [
+            "squamous_cell_nasopharynx",
+            "squamous_cell_nasopharynx_female",
+            "squamous_cell_nasopharynx_female_percent",
+            "squamous_cell_nasopharynx_male",
+            "squamous_cell_nasopharynx_male_percent"
+          ]
+        },
+        {
+          "section": "squamous_cell_oropharynx",
+          "report_indicators": [
+            "squamous_cell_oropharynx",
+            "squamous_cell_oropharynx_female",
+            "squamous_cell_oropharynx_female_percent",
+            "squamous_cell_oropharynx_male",
+            "squamous_cell_oropharynx_male_percent"
+          ]
+        },
+        {
+          "section": "cancer_staging",
+          "report_indicators": [
+            "stage_four",
+            "stage_three",
+            "stage_two",
+            "stage_one"
+          ]
+        },
+        {
+          "section": "stage_four",
+          "report_indicators": [
+            "stage_four",
+            "stage_four_female",
+            "stage_four_female_percent",
+            "stage_four_male",
+            "stage_four_male_percent"
+          ]
+        },
+        {
+          "section": "stage_three",
+          "report_indicators": [
+            "stage_three",
+            "stage_three_female",
+            "stage_three_female_percent",
+            "stage_three_male",
+            "stage_three_male_percent"
+          ]
+        },
+        {
+          "section": "stage_two",
+          "report_indicators": [
+            "stage_two",
+            "stage_two_female",
+            "stage_two_female_percent",
+            "stage_two_male",
+            "stage_two_male_percent"
+          ]
+        },
+        {
+          "section": "stage_one",
+          "report_indicators": [
+            "stage_one",
+            "stage_one_female",
+            "stage_one_female_percent",
+            "stage_one_male",
+            "stage_one_male_percent"
+          ]
+        },
+        {
+          "section": "limited_stage",
+          "report_indicators": [
+            "limited_stage",
+            "limited_stage_female",
+            "limited_stage_female_percent",
+            "limited_stage_male",
+            "limited_stage_male_percent"
+          ]
+        },
+        {
+          "section": "extensive_stage",
+          "report_indicators": [
+            "extensive_stage",
+            "extensive_stage_female",
+            "extensive_stage_female_percent",
+            "extensive_stage_male",
+            "extensive_stage_male_percent"
+          ]
+        },
+        {
+          "section": "surgery",
+          "report_indicators": [
+            "surgery",
+            "surgery_female",
+            "surgery_female_percent",
+            "surgery_male",
+            "surgery_male_percent"
+          ]
+        },
+        {
+          "section": "surgery_referral",
+          "report_indicators": [
+            "surgery_referral",
+            "surgery_referral_female",
+            "surgery_referral_female_percent",
+            "surgery_referral_male",
+            "surgery_referral_male_percent"
+          ]
+        },
+        {
+          "section": "sys_cardiopulmonary_breath_shortness",
+          "report_indicators": [
+            "sys_cardiopulmonary_breath_shortness",
+            "sys_cardiopulmonary_breath_shortness_female",
+            "sys_cardiopulmonary_breath_shortness_female_percent",
+            "sys_cardiopulmonary_breath_shortness_male",
+            "sys_cardiopulmonary_breath_shortness_male_percent"
+          ]
+        },
+        {
+          "section": "sys_cardiopulmonary_breathing_difficulty",
+          "report_indicators": [
+            "sys_cardiopulmonary_breathing_difficulty",
+            "sys_cardiopulmonary_breathing_difficulty_female",
+            "sys_cardiopulmonary_breathing_difficulty_female_percent",
+            "sys_cardiopulmonary_breathing_difficulty_male",
+            "sys_cardiopulmonary_breathing_difficulty_male_percent"
+          ]
+        },
+        {
+          "section": "sys_cardiopulmonary_chest_pains",
+          "report_indicators": [
+            "sys_cardiopulmonary_chest_pains",
+            "sys_cardiopulmonary_chest_pains_female",
+            "sys_cardiopulmonary_chest_pains_female_percent",
+            "sys_cardiopulmonary_chest_pains_male",
+            "sys_cardiopulmonary_chest_pains_male_percent"
+          ]
+        },
+        {
+          "section": "sys_cardiopulmonary_cough",
+          "report_indicators": [
+            "sys_cardiopulmonary_cough",
+            "sys_cardiopulmonary_cough_female",
+            "sys_cardiopulmonary_cough_female_percent",
+            "sys_cardiopulmonary_cough_male",
+            "sys_cardiopulmonary_cough_male_percent"
+          ]
+        },
+        {
+          "section": "sys_cardiopulmonary_normal",
+          "report_indicators": [
+            "sys_cardiopulmonary_normal",
+            "sys_cardiopulmonary_normal_female",
+            "sys_cardiopulmonary_normal_female_percent",
+            "sys_cardiopulmonary_normal_male",
+            "sys_cardiopulmonary_normal_male_percent"
+          ]
+        },
+        {
+          "section": "sys_cardiopulmonary_other",
+          "report_indicators": [
+            "sys_cardiopulmonary_other",
+            "sys_cardiopulmonary_other_female",
+            "sys_cardiopulmonary_other_female_percent",
+            "sys_cardiopulmonary_other_male",
+            "sys_cardiopulmonary_other_male_percent"
+          ]
+        },
+        {
+          "section": "sys_cardiopulmonary_palpitations",
+          "report_indicators": [
+            "sys_cardiopulmonary_palpitations",
+            "sys_cardiopulmonary_palpitations_female",
+            "sys_cardiopulmonary_palpitations_female_percent",
+            "sys_cardiopulmonary_palpitations_male",
+            "sys_cardiopulmonary_palpitations_male_percent"
+          ]
+        },
+        {
+          "section": "sys_gastrointestinal_abdominal_pain",
+          "report_indicators": [
+            "sys_gastrointestinal_abdominal_pain",
+            "sys_gastrointestinal_abdominal_pain_female",
+            "sys_gastrointestinal_abdominal_pain_female_percent",
+            "sys_gastrointestinal_abdominal_pain_male",
+            "sys_gastrointestinal_abdominal_pain_male_percent"
+          ]
+        },
+        {
+          "section": "sys_gastrointestinal_constipation",
+          "report_indicators": [
+            "sys_gastrointestinal_constipation",
+            "sys_gastrointestinal_constipation_female",
+            "sys_gastrointestinal_constipation_female_percent",
+            "sys_gastrointestinal_constipation_male",
+            "sys_gastrointestinal_constipation_male_percent"
+          ]
+        },
+        {
+          "section": "sys_gastrointestinal_dysphagia",
+          "report_indicators": [
+            "sys_gastrointestinal_dysphagia",
+            "sys_gastrointestinal_dysphagia_female",
+            "sys_gastrointestinal_dysphagia_female_percent",
+            "sys_gastrointestinal_dysphagia_male",
+            "sys_gastrointestinal_dysphagia_male_percent"
+          ]
+        },
+        {
+          "section": "sys_gastrointestinal_jaundice",
+          "report_indicators": [
+            "sys_gastrointestinal_jaundice",
+            "sys_gastrointestinal_jaundice_female",
+            "sys_gastrointestinal_jaundice_female_percent",
+            "sys_gastrointestinal_jaundice_male",
+            "sys_gastrointestinal_jaundice_male_percent"
+          ]
+        },
+        {
+          "section": "sys_gastrointestinal_normal",
+          "report_indicators": [
+            "sys_gastrointestinal_normal",
+            "sys_gastrointestinal_normal_female",
+            "sys_gastrointestinal_normal_female_percent",
+            "sys_gastrointestinal_normal_male",
+            "sys_gastrointestinal_normal_male_percent"
+          ]
+        },
+        {
+          "section": "sys_gastrointestinal_poor_appetite",
+          "report_indicators": [
+            "sys_gastrointestinal_poor_appetite",
+            "sys_gastrointestinal_poor_appetite_female",
+            "sys_gastrointestinal_poor_appetite_female_percent",
+            "sys_gastrointestinal_poor_appetite_male",
+            "sys_gastrointestinal_poor_appetite_male_percent"
+          ]
+        },
+        {
+          "section": "sys_general_fatique",
+          "report_indicators": [
+            "sys_general_fatique",
+            "sys_general_fatique_female",
+            "sys_general_fatique_female_percent",
+            "sys_general_fatique_male",
+            "sys_general_fatique_male_percent"
+          ]
+        },
+        {
+          "section": "sys_general_fever",
+          "report_indicators": [
+            "sys_general_fever",
+            "sys_general_fever_female",
+            "sys_general_fever_female_percent",
+            "sys_general_fever_male",
+            "sys_general_fever_male_percent"
+          ]
+        },
+        {
+          "section": "sys_general_jaundice",
+          "report_indicators": [
+            "sys_general_jaundice",
+            "sys_general_jaundice_female",
+            "sys_general_jaundice_female_percent",
+            "sys_general_jaundice_male",
+            "sys_general_jaundice_male_percent"
+          ]
+        },
+        {
+          "section": "sys_general_night_sweat",
+          "report_indicators": [
+            "sys_general_night_sweat",
+            "sys_general_night_sweat_female",
+            "sys_general_night_sweat_female_percent",
+            "sys_general_night_sweat_male",
+            "sys_general_night_sweat_male_percent"
+          ]
+        },
+        {
+          "section": "sys_general_normal",
+          "report_indicators": [
+            "sys_general_normal",
+            "sys_general_normal_female",
+            "sys_general_normal_female_percent",
+            "sys_general_normal_male",
+            "sys_general_normal_male_percent"
+          ]
+        },
+        {
+          "section": "sys_general_other",
+          "report_indicators": [
+            "sys_general_other",
+            "sys_general_other_female",
+            "sys_general_other_female_percent",
+            "sys_general_other_male",
+            "sys_general_other_male_percent"
+          ]
+        },
+        {
+          "section": "sys_general_pain",
+          "report_indicators": [
+            "sys_general_pain",
+            "sys_general_pain_female",
+            "sys_general_pain_female_percent",
+            "sys_general_pain_male",
+            "sys_general_pain_male_percent"
+          ]
+        },
+        {
+          "section": "sys_general_pallor",
+          "report_indicators": [
+            "sys_general_pallor",
+            "sys_general_pallor_female",
+            "sys_general_pallor_female_percent",
+            "sys_general_pallor_male",
+            "sys_general_pallor_male_percent"
+          ]
+        },
+        {
+          "section": "sys_general_weight_loss",
+          "report_indicators": [
+            "sys_general_weight_loss",
+            "sys_general_weight_loss_female",
+            "sys_general_weight_loss_female_percent",
+            "sys_general_weight_loss_male",
+            "sys_general_weight_loss_male_percent"
+          ]
+        },
+        {
+          "section": "sys_genitourinary_dysuria",
+          "report_indicators": [
+            "sys_genitourinary_dysuria",
+            "sys_genitourinary_dysuria_female",
+            "sys_genitourinary_dysuria_female_percent",
+            "sys_genitourinary_dysuria_male",
+            "sys_genitourinary_dysuria_male_percent"
+          ]
+        },
+        {
+          "section": "sys_genitourinary_hematuria",
+          "report_indicators": [
+            "sys_genitourinary_hematuria",
+            "sys_genitourinary_hematuria_female",
+            "sys_genitourinary_hematuria_female_percent",
+            "sys_genitourinary_hematuria_male",
+            "sys_genitourinary_hematuria_male_percent"
+          ]
+        },
+        {
+          "section": "sys_genitourinary_lower_abdominal_pain",
+          "report_indicators": [
+            "sys_genitourinary_lower_abdominal_pain",
+            "sys_genitourinary_lower_abdominal_pain_female",
+            "sys_genitourinary_lower_abdominal_pain_female_percent",
+            "sys_genitourinary_lower_abdominal_pain_male",
+            "sys_genitourinary_lower_abdominal_pain_male_percent"
+          ]
+        },
+        {
+          "section": "sys_genitourinary_menopausal",
+          "report_indicators": [
+            "sys_genitourinary_menopausal",
+            "sys_genitourinary_menopausal_above_70",
+            "sys_genitourinary_menopausal_below_20",
+            "sys_genitourinary_menopausal_below_20_percent",
+            "sys_genitourinary_menopausal_btwn_21_30",
+            "sys_genitourinary_menopausal_btwn_21_30_percent",
+            "sys_genitourinary_menopausal_btwn_31_40",
+            "sys_genitourinary_menopausal_btwn_31_40_percent",
+            "sys_genitourinary_menopausal_btwn_41_50",
+            "sys_genitourinary_menopausal_btwn_41_50_percent",
+            "sys_genitourinary_menopausal_btwn_51_60",
+            "sys_genitourinary_menopausal_btwn_51_60_percent",
+            "sys_genitourinary_menopausal_btwn_61_70",
+            "sys_genitourinary_menopausal_btwn_61_70_percent"
+          ]
+        },
+        {
+          "section": "sys_genitourinary_menstruating",
+          "report_indicators": [
+            "sys_genitourinary_menstruating",
+            "sys_genitourinary_menstruating_above_70",
+            "sys_genitourinary_menstruating_below_20",
+            "sys_genitourinary_menstruating_below_20_percent",
+            "sys_genitourinary_menstruating_btwn_21_30",
+            "sys_genitourinary_menstruating_btwn_21_30_percent",
+            "sys_genitourinary_menstruating_btwn_31_40",
+            "sys_genitourinary_menstruating_btwn_31_40_percent",
+            "sys_genitourinary_menstruating_btwn_41_50",
+            "sys_genitourinary_menstruating_btwn_41_50_percent",
+            "sys_genitourinary_menstruating_btwn_51_60",
+            "sys_genitourinary_menstruating_btwn_51_60_percent",
+            "sys_genitourinary_menstruating_btwn_61_70",
+            "sys_genitourinary_menstruating_btwn_61_70_percent"
+          ]
+        },
+        {
+          "section": "sys_genitourinary_normal",
+          "report_indicators": [
+            "sys_genitourinary_normal",
+            "sys_genitourinary_normal_female",
+            "sys_genitourinary_normal_female_percent",
+            "sys_genitourinary_normal_male",
+            "sys_genitourinary_normal_male_percent"
+          ]
+        },
+        {
+          "section": "sys_genitourinary_oliguria",
+          "report_indicators": [
+            "sys_genitourinary_oliguria",
+            "sys_genitourinary_oliguria_female",
+            "sys_genitourinary_oliguria_female_percent",
+            "sys_genitourinary_oliguria_male",
+            "sys_genitourinary_oliguria_male_percent"
+          ]
+        },
+        {
+          "section": "sys_genitourinary_polyuria",
+          "report_indicators": [
+            "sys_genitourinary_polyuria",
+            "sys_genitourinary_polyuria_female",
+            "sys_genitourinary_polyuria_female_percent",
+            "sys_genitourinary_polyuria_male",
+            "sys_genitourinary_polyuria_male_percent"
+          ]
+        },
+        {
+          "section": "sys_genitourinary_testicular_mass",
+          "report_indicators": [
+            "sys_genitourinary_testicular_mass",
+            "sys_genitourinary_testicular_mass_female",
+            "sys_genitourinary_testicular_mass_female_percent",
+            "sys_genitourinary_testicular_mass_male",
+            "sys_genitourinary_testicular_mass_male_percent"
+          ]
+        },
+        {
+          "section": "sys_genitourinary_urine_urgency",
+          "report_indicators": [
+            "sys_genitourinary_urine_urgency",
+            "sys_genitourinary_urine_urgency_female",
+            "sys_genitourinary_urine_urgency_female_percent",
+            "sys_genitourinary_urine_urgency_male",
+            "sys_genitourinary_urine_urgency_male_percent"
+          ]
+        },
+        {
+          "section": "sys_muscoskeletal_leg_edema",
+          "report_indicators": [
+            "sys_muscoskeletal_leg_edema",
+            "sys_muscoskeletal_leg_edema_female",
+            "sys_muscoskeletal_leg_edema_female_percent",
+            "sys_muscoskeletal_leg_edema_male",
+            "sys_muscoskeletal_leg_edema_male_percent"
+          ]
+        },
+        {
+          "section": "sys_muscoskeletal_leg_ulcers",
+          "report_indicators": [
+            "sys_muscoskeletal_leg_ulcers",
+            "sys_muscoskeletal_leg_ulcers_female",
+            "sys_muscoskeletal_leg_ulcers_female_percent",
+            "sys_muscoskeletal_leg_ulcers_male",
+            "sys_muscoskeletal_leg_ulcers_male_percent"
+          ]
+        },
+        {
+          "section": "sys_muscoskeletal_other",
+          "report_indicators": [
+            "sys_muscoskeletal_other",
+            "sys_muscoskeletal_other_female",
+            "sys_muscoskeletal_other_female_percent",
+            "sys_muscoskeletal_other_male",
+            "sys_muscoskeletal_other_male_percent"
+          ]
+        },
+        {
+          "section": "sys_muscoskeletal_pain_lower_extermities",
+          "report_indicators": [
+            "sys_muscoskeletal_pain_lower_extermities",
+            "sys_muscoskeletal_pain_lower_extermities_female",
+            "sys_muscoskeletal_pain_lower_extermities_female_percent",
+            "sys_muscoskeletal_pain_lower_extermities_male",
+            "sys_muscoskeletal_pain_lower_extermities_male_percent"
+          ]
+        },
+        {
+          "section": "sys_muscoskeletal_swelling",
+          "report_indicators": [
+            "sys_muscoskeletal_swelling",
+            "sys_muscoskeletal_swelling_female",
+            "sys_muscoskeletal_swelling_female_percent",
+            "sys_muscoskeletal_swelling_male",
+            "sys_muscoskeletal_swelling_male_percent"
+          ]
+        },
+        {
+          "section": "testes",
+          "report_indicators": [
+            "testes",
+            "testes_above_70",
+            "testes_below_20",
+            "testes_below_20_percent",
+            "testes_btwn_21_30",
+            "testes_btwn_21_30_percent",
+            "testes_btwn_31_40",
+            "testes_btwn_31_40_percent",
+            "testes_btwn_41_50",
+            "testes_btwn_41_50_percent",
+            "testes_btwn_51_60",
+            "testes_btwn_51_60_percent",
+            "testes_btwn_61_70",
+            "testes_btwn_61_70_percent"
+          ]
+        },
+        {
+          "section": "thyroid_cancer",
+          "report_indicators": [
+            "thyroid_cancer",
+            "thyroid_cancer_female",
+            "thyroid_cancer_female_percent",
+            "thyroid_cancer_male",
+            "thyroid_cancer_male_percent"
+          ]
+        },
+        {
+          "section": "total_diagnosed_patients",
+          "report_indicators": ["total_diagnosed_patients"]
+        },
+        {
+          "section": "ttp_or_hus",
+          "report_indicators": [
+            "ttp_or_hus",
+            "ttp_or_hus_female",
+            "ttp_or_hus_female_percent",
+            "ttp_or_hus_male",
+            "ttp_or_hus_male_percent"
+          ]
+        },
+        {
+          "section": "uterine",
+          "report_indicators": [
+            "uterine",
+            "uterine_above_70",
+            "uterine_above_70_percent",
+            "uterine_below_20",
+            "uterine_below_20_percent",
+            "uterine_btwn_21_30",
+            "uterine_btwn_21_30_percent",
+            "uterine_btwn_31_40",
+            "uterine_btwn_31_40_percent",
+            "uterine_btwn_41_50",
+            "uterine_btwn_41_50_percent",
+            "uterine_btwn_51_60",
+            "uterine_btwn_51_60_percent",
+            "uterine_btwn_61_70",
+            "uterine_btwn_61_70_percent"
+          ]
+        },
+        {
+          "section": "wilms_tumor",
+          "report_indicators": [
+            "wilms_tumor",
+            "wilms_tumor_female",
+            "wilms_tumor_female_percent",
+            "wilms_tumor_male",
+            "wilms_tumor_male_percent"
+          ]
+        }
+      ]
+    },
+    {
+      "report_type": "patient-vitals-treatment-numbers",
+      "sections": [
+        {
+          "section": "enrolled_patients",
+          "report_indicators": [
+            "Abnormal_bmi_obese",
+            "Abnormal_bmi_overweight",
+            "Abnormal_bmi_underweight",
+            "abnormal_oxygen_sat",
+            "abnormal_pulse",
+            "high_abnormal_temperature",
+            "normal_bmi",
+            "normal_oxygen_sat",
+            "normal_pulse"
+          ]
+        }
+      ]
+    },
+    {
+      "report_type": "social-history-numbers",
+      "sections": [
+        {
+          "section": "enrolled_patients",
+          "report_indicators": [
+            "Community_mass_screening_event_refferal",
+            "Referred_from_private_sector",
+            "Referred_from_public_facility",
+            "alcohol_type_Beer",
+            "alcohol_type_Busaa",
+            "alcohol_type_Changaa",
+            "alcohol_type_Liquor",
+            "alcohol_type_Wine",
+            "cigarettes_smoking_no",
+            "cigarettes_smoking_stopped",
+            "cigarettes_smoking_yes",
+            "deceased",
+            "dont_have_nhif_cover",
+            "drink_alcohol_no",
+            "drink_alcohol_stopped",
+            "drink_alcohol_yes",
+            "family_mem_with_cancer_Children",
+            "family_mem_with_cancer_Maternal_grandparents",
+            "family_mem_with_cancer_Maternal_uncles_or_aunties",
+            "family_mem_with_cancer_Parents",
+            "family_mem_with_cancer_Paternal_grandparents",
+            "family_mem_with_cancer_Paternal_uncles_or_aunties",
+            "family_mem_with_cancer_Self",
+            "family_mem_with_cancer_Siblings",
+            "have_nhif_cover",
+            "income_amount_1001_to_10000_Ksh",
+            "income_amount_10001_to_20000_Ksh",
+            "income_amount_20001_to_30000_Ksh",
+            "income_amount_30001_to_40000_Ksh",
+            "income_amount_40001_to_50000_Ksh",
+            "income_amount_Less_than_1000_Ksh",
+            "income_amount_More_than_50000_Ksh",
+            "main_occupation_Casual_worker",
+            "main_occupation_Civil_servant",
+            "main_occupation_Farmer",
+            "main_occupation_Formal_employment",
+            "main_occupation_Health_professional",
+            "main_occupation_Housewife",
+            "main_occupation_Teacher",
+            "main_occupation_Truck_driver",
+            "main_occupation_Unemployed",
+            "main_occupation_other",
+            "main_occupation_self_employed",
+            "main_occupation_student",
+            "marital_status_Divorced",
+            "marital_status_Living_with_partner",
+            "marital_status_Never_married",
+            "marital_status_Not_applicable",
+            "marital_status_Separated",
+            "marital_status_Widowed",
+            "marital_status_married_monogamous",
+            "marital_status_married_polygamous",
+            "nhif_paid_by_Donors",
+            "nhif_paid_by_Government",
+            "nhif_paid_by_Other",
+            "nhif_paid_by_Parents",
+            "nhif_paid_by_Self",
+            "nhif_paid_by_Siblings",
+            "nhif_status_active",
+            "nhif_status_inactive",
+            "patient_edu_level_None",
+            "patient_edu_level_Pre_unit",
+            "patient_edu_level_Primary",
+            "patient_edu_level_Secondary",
+            "patient_edu_level_Tertiary",
+            "religious_affiliation_Buddhist",
+            "religious_affiliation_Buddhist_None",
+            "religious_affiliation_Catholic",
+            "religious_affiliation_Hindu",
+            "religious_affiliation_Islamic",
+            "religious_affiliation_Protestant",
+            "religious_affiliation_Traditionalism",
+            "self_refferal",
+            "travel_duration_Between_1_and_2_hours",
+            "travel_duration_Between_2_and_4_hours",
+            "travel_duration_Between_4_and_8_hours",
+            "travel_duration_Between_30_and_60_min",
+            "travel_duration_Less_than_30_mins",
+            "travel_duration_More_than_8_hours",
+            "travel_mode_Boda_Boda",
+            "travel_mode_Bus",
+            "travel_mode_Matatu",
+            "travel_mode_Private_car",
+            "travel_mode_Taxi",
+            "travel_mode_Walking"
+          ]
+        }
+      ]
+    },
+    {
+      "report_type": "palliative-care-numbers",
+      "sections": [
+        {
+          "section": "enrolled_patients",
+          "report_indicators": [
+            "comorbid_illness_no",
+            "comorbid_illness_yes",
+            "encounter_datetime",
+            "hiv_status_negative",
+            "hiv_status_negative_female",
+            "hiv_status_negative_male",
+            "hiv_status_positive",
+            "hiv_status_positive_female",
+            "hiv_status_positive_male",
+            "hiv_status_unknown",
+            "hiv_status_unknown_female",
+            "hiv_status_unknown_male",
+            "location_name",
+            "palliative_form_filled",
+            "palliative_plan_Bereavement",
+            "palliative_plan_Counseling",
+            "palliative_plan_Daycare",
+            "palliative_plan_Financial_Support",
+            "palliative_plan_Legal_Aid",
+            "palliative_plan_None",
+            "palliative_plan_Nutritional_Support",
+            "palliative_plan_Nutritional_supplements",
+            "palliative_plan_Pain_or_Symptom_Management",
+            "palliative_plan_Spiritual_Care",
+            "palliative_reason_Bereavement",
+            "palliative_reason_Care_support",
+            "palliative_reason_Emotional_or_Psychological_support",
+            "palliative_reason_End_of_life_care",
+            "palliative_reason_Financial_Support",
+            "palliative_reason_Other",
+            "palliative_reason_Pain_or_symptom_control",
+            "palliative_reason_Routine_care",
+            "palliative_reason_Spiritual_Support",
+            "patient_not_referred",
+            "patient_referred"
+          ]
+        }
+      ]
+    },
+    {
+      "report_type": "death-report-numbers",
+      "sections": [
+        {
+          "section": "enrolled_patients",
+          "report_indicators": [
+            "cause_of_death_Health_issues",
+            "cause_of_death_Other",
+            "cause_of_death_Other_natural_issues",
+            "cause_of_death_Unkown",
+            "death_date_Confirmed",
+            "death_date_estimated",
+            "death_investigation_done_No",
+            "death_investigation_done_Unknown",
+            "death_investigation_done_Yes",
+            "death_investigation_method_postmoterm",
+            "death_investigation_method_verbal",
+            "death_reported_by_Clinician_or_Health_worker",
+            "death_reported_by_Father",
+            "death_reported_by_Friend",
+            "death_reported_by_Grandparent",
+            "death_reported_by_Mother",
+            "death_reported_by_Other",
+            "death_reported_by_Other_family_member",
+            "death_reported_by_Sibling",
+            "death_reported_by_Spouse",
+            "encounter_datetime",
+            "not_deceased_error",
+            "patient_category_Adult",
+            "patient_category_Pead",
+            "place_of_death_Home",
+            "place_of_death_Hospital",
+            "place_of_death_Other",
+            "place_of_death_Unknown",
+            "provider_department_Clinical_department",
+            "provider_department_Nutiritional_support",
+            "provider_department_Outreach",
+            "provider_department_Pychosocial_support",
+            "provider_department_Social_work"
+          ]
+        }
+      ]
+    },
+    {
+      "report_type": "prostate-cancer-screening-numbers",
+      "sections": [
+        {
+          "section": "enrolled_patients",
+          "report_indicators": [
+            "cur_visit_type_new",
+            "cur_visit_type_scheduled",
+            "encounter_datetime",
+            "location_name",
+            "psa_test_results_Negative",
+            "psa_test_results_Not_done",
+            "psa_test_results_Positive",
+            "psa_test_results_Unknown"
+          ]
+        }
+      ]
+    },
+    {
+      "report_type": "breast-cancer-treatment-numbers",
+      "sections": [
+        {
+          "section": "enrolled_patients",
+          "report_indicators": [
+            "enrolled_patients",
+            "active_patients",
+            "deceased",
+            "small_cell_lung_cancer",
+            "non_small_cell_lung_cancer",
+            "adenocarcinoma",
+            "epidermoid_carcinoma",
+            "large_cell_carcinoma",
+            "mixed_squamous",
+            "lost_to_follow_up",
+            "stage_one",
+            "stage_two",
+            "stage_three",
+            "stage_four",
+            "limited_stage",
+            "extensive_stage",
+            "for_staging",
+            "chemotherapy",
+            "radiotherapy",
+            "surgery"
+          ]
+        }
+      ]
+    }
+  ]
+}

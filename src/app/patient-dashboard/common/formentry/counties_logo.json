@@ -1,0 +1,27 @@
+[
+  {
+    "display": "ICI CLINIC",
+    "uuid": "8ce15cad-c7ff-41d9-b55c-5230116c3bf7",
+    "image": []
+  },
+  {
+    "display": "meru",
+    "uuid": "aa65d6b1-fad8-46a7-94cb-f5247d21509d",
+    "image": []
+  },
+  {
+    "display": "makueni",
+    "uuid": "62dd3fa9-f615-4c65-883e-84ba35fa7525",
+    "image": ["933eb431946a14775fcaa46cead9735e5f1504ca.png"]
+  },
+  {
+    "display": "voi",
+    "uuid": "f6e5ea33-13e5-4b1f-ad09-097456c31982",
+    "image": []
+  },
+  {
+    "display": "location test",
+    "uuid": "002249cc-6d60-441e-8c15-2e36aa14c0ae",
+    "image": ["933eb431946a14775fcaa46cead9735e5f1504ca.png"]
+  }
+]

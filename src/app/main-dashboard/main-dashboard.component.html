@@ -1,0 +1,33 @@
+<header class="main-header">
+  <a class="sidebar-toggle" data-toggle="offcanvas" role="button">
+  </a>
+  <static-navbar></static-navbar>
+</header>
+<aside class="main-sidebar">
+  <side-navigation [current-dashboard]="currentDashboard"></side-navigation>
+</aside>
+<div id="content-wrapper" class="content-wrapper" style="min-height: 100%;">
+  <div class="overlay" [ngClass]="{show: active, hide: !active}" (click)="clickOverlay($event)">
+    <div class='overlay-text'>You will be logged out in {{countDown}} seconds</div>
+  </div>
+  <section class="content">
+     <motd-notification></motd-notification>
+    <router-outlet></router-outlet>
+    
+  </section>
+</div>
+<footer class="main-footer">
+  <div class="footer-logo pull-left">
+    <a routerLink="/" class="logo">
+      <div class="logo-img"><img src="./assets/img/ici.png"/></div>
+    </a></div>
+  <div class="pull-right">
+    <online-tracker></online-tracker>
+  </div>
+  <div class="pull-right">
+    <build-version></build-version>
+  </div>
+  <div class="clear"></div>
+</footer>
+<div class="control-sidebar-bg"></div>
+

@@ -1,0 +1,15 @@
+chart {
+  display: block;
+}
+
+.ui-tabview-panels {
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+}
+
+h4.text-muted {
+  position: absolute;
+  bottom: 60px;
+  right: 55px;
+}

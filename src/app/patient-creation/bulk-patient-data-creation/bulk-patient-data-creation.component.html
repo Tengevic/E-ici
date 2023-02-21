@@ -1,0 +1,110 @@
+<p-tabView>
+  <p-tabPanel header="Patient Upload">
+    <div class="box-body">
+      <div class="component-wrapper">
+        <h4 class="component-title"><span class="fa fa-heartbeat"></span> Bulk Patient Upload</h4>
+        <div style="margin-bottom:0.5cm;">
+          <input type="file" (change)="onFileChange($event, 'patient')" />
+        </div>
+        <div>
+          <button (click)="uploadPatients()">upload patients</button>
+        </div>
+        <div>
+          <button (click)="createFailedSheet()">download failed upload</button>
+        </div>
+        <table style="margin-top: 20px;" class="table table-bordered">
+          <thead>
+            <tr>
+              <!-- <th class="pointer" (click)="sort('dateActivated')">Date Created <i class="fa" [ngClass]="{'fa-sort': column != 'dateActivated', 
+                                                         'fa-sort-asc': (column == 'dateActivated' && !isDesc), 
+                                                         'fa-sort-desc': (column == 'dateActivated' && isDesc) }"
+                  aria-hidden="true"> </i>
+              </th> -->
+              <th>given name</th>
+              <th>middle name</th>
+              <th>family name</th>
+              <th>gender</th>
+              <th>birthdate_estimated</th>
+              <th>birthdate</th>
+              <th>person.address1</th>
+              <th>person.address2</th>
+              <th>person.address3</th>
+              <!-- <th>person.state_province</th>
+              <th>person.city_village</th> -->
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let person of persons">
+              <td>{{person.givenName}}</td> 
+              <td>{{person.middleName}}</td>
+              <td>{{person.familyName}}</td> 
+              <td>{{person.gender}}</td> 
+             <td>{{person.birthdateEstimated}}</td> 
+            <td>{{person.birthDate}}</td> 
+             <td>{{person.address1}}</td> 
+             <td>{{person.address2}}</td> 
+             <td>{{person.address3}}</td> 
+              <!-- <td>{{person.age}}</td> 
+              <td>{{person.alternativePhoneNumber}}</td> 
+             <td>{{person.ampathMrsUId}}</td> 
+              <td>{{person.amrsMrn}}</td>  
+           <td>{{person.causeOfDeath}}</td>   
+            <td>{{person.cityVillage}}</td>  
+              <td>{{person.dead}}</td>  -->
+             
+            
+              
+             <!-- <td>{{person.healthCenter}}</td> 
+            <td>{{person.ispreferred}}</td>  
+             <td>{{person.kenyaNationalId}}</td> 
+              
+             <td>{{person.name}}</td> 
+              <td>{{person.nextofkinPhoneNumber}}</td> 
+            <td>{{person.patientPhoneNumber}}</td>  
+            <td>{{person.patnerPhoneNumber}}</td>  
+             <td>{{person.preferredNameuuid}}</td>  -->
+              <!-- <td>{{ person.first_name}}</td></td>>
+              <td>{{person.middle_name}} </td>
+              <td>{{ person.family_name}}</td>
+              <td>{{ person.gender }}</td>
+              <td>{{ person.birthdate_estimated }}</td>
+              <td>person.birthdate</td>
+              <td>person.address1</td>
+              <td>person.address2</td>
+              <td>person.address3</td>
+              <td>person.state_province</td>
+              <td>person.city_village</td> -->
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </p-tabPanel>
+  <p-tabPanel header="Patient Search">
+<app-bulk-patient></app-bulk-patient>
+  </p-tabPanel>
+  <p-tabPanel header="Patient Program Upload">
+    <h4 class="component-title"><span class="fa fa-heartbeat"></span> Bulk Patient Program Upload</h4>
+    <div style="margin-bottom:0.5cm;">
+      <input type="file" (change)="onFileChange($event,'programs')" />
+    </div>
+    <div>
+      <button (click)="uploadPatients()">upload patients</button>
+    </div>
+    <div>
+      <button (click)="createFailedSheet()">download failed upload</button>
+    </div>
+    </p-tabPanel>
+    <p-tabPanel header="encounter visit and obs ">
+      <h4 class="component-title"><span class="fa fa-heartbeat"></span> Bulk Patient Encounter/visit/obs Upload</h4>
+      <div style="margin-bottom:0.5cm;">
+        <input type="file" (change)="onFileChange($event,'encounter')" />
+      </div>
+      <div>
+        <button (click)="uploadPatients()">upload patients</button>
+      </div>
+      <div>
+        <button (click)="createFailedSheet()">download failed upload</button>
+      </div>
+    </p-tabPanel>
+  </p-tabView>

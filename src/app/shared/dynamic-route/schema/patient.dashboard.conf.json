@@ -1,0 +1,441 @@
+{
+  "id": "patientDashboard",
+  "name": "Patient Dashboard",
+  "baseRoute": "patient-dashboard",
+  "programs": [
+    {
+      "programName": "General Info",
+      "programUuid": "general-uuid",
+      "baseRoute": "general",
+      "alias": "general",
+      "published": true,
+      "requiresPatientEnrollment": false,
+      "routes": [
+        {
+          "url": "patient-info",
+          "label": "Patient Info",
+          "icon": "fa fa-clipboard"
+        },
+        {
+          "url": "patient-vitals",
+          "label": "Vitals",
+          "icon": "fa fa-heartbeat"
+        },
+        {
+          "url": "patient-encounters",
+          "label": "Encounters",
+          "icon": "icon-i-immunizations"
+        },
+        {
+          "url": "lab-data-summary",
+          "label": "Lab Data Summary",
+          "icon": "icon-i-laboratory"
+        },
+        {
+          "url": "lab-orders",
+          "label": "Lab Orders",
+          "icon": "icon-i-pathology"
+        },
+        {
+          "url": "drug-orders",
+          "label": "Drug Orders",
+          "icon": "icon-i-pharmacy"
+        },
+        {
+          "url": "program-manager",
+          "label": "Program Manager",
+          "icon": "icon-i-administration"
+        },
+        {
+          "url": "orders",
+          "label": "Order Reports",
+          "icon": "icon-i-immunizations"
+        },
+        {
+          "url": "patient-imaging",
+          "label": "Imaging",
+          "icon": "icon-i-radiology"
+        }
+      ]
+    },
+    {
+      "programName": "Cervical Cancer Screening",
+      "programUuid": "cad71628-692c-4d8f-8dac-b2e20bece27f",
+      "baseRoute": "cad71628-692c-4d8f-8dac-b2e20bece27f",
+      "alias": "screening",
+      "published": true,
+      "shared-routes-class": "screening",
+      "requiresPatientEnrollment": true,
+      "routes": []
+    },
+    {
+      "programName": "Gyn-Oncology Treatment",
+      "programUuid": "43b42170-b3ce-4e03-9390-6bd78384ac06",
+      "baseRoute": "43b42170-b3ce-4e03-9390-6bd78384ac06",
+      "alias": "treatment",
+      "published": true,
+      "shared-routes-class": "treatment",
+      "requiresPatientEnrollment": true,
+      "routes": []
+    },
+    {
+      "programName": "Breast Cancer Screening",
+      "programUuid": "142939b0-28a9-4649-baf9-a9d012bf3b3d",
+      "baseRoute": "142939b0-28a9-4649-baf9-a9d012bf3b3d",
+      "alias": "screening",
+      "published": true,
+      "shared-routes-class": "screening",
+      "requiresPatientEnrollment": true,
+      "routes": []
+    },
+    {
+      "programName": "Breast Cancer Treatment",
+      "programUuid": "88566621-828f-4569-9af5-c54f8237750a",
+      "baseRoute": "88566621-828f-4569-9af5-c54f8237750a",
+      "alias": "treatment",
+      "published": true,
+      "shared-routes-class": "treatment",
+      "requiresPatientEnrollment": true,
+      "routes": []
+    },
+    {
+      "programName": "Sickle Cell",
+      "programUuid": "e48b266e-4d80-41f8-a56a-a8ce5449ebc6",
+      "baseRoute": "e48b266e-4d80-41f8-a56a-a8ce5449ebc6",
+      "alias": "treatment",
+      "published": true,
+      "shared-routes-class": "treatment",
+      "requiresPatientEnrollment": true,
+      "routes": []
+    },
+    {
+      "programName": "Multiple Myeloma",
+      "programUuid": "698b7153-bff3-4931-9638-d279ca47b32e",
+      "baseRoute": "698b7153-bff3-4931-9638-d279ca47b32e",
+      "alias": "treatment",
+      "published": true,
+      "shared-routes-class": "treatment",
+      "requiresPatientEnrollment": true,
+      "routes": []
+    },
+    {
+      "programName": "Anticoagulation Treatment Program",
+      "programUuid": "418fe011-a903-4862-93d4-5e7c84d9c253",
+      "baseRoute": "418fe011-a903-4862-93d4-5e7c84d9c253",
+      "alias": "treatment",
+      "published": true,
+      "shared-routes-class": "treatment",
+      "requiresPatientEnrollment": true,
+      "routes": []
+    },
+    {
+      "programName": "Lymphoma Treatment Program",
+      "programUuid": "40677054-c402-4c56-a0e4-5dd7d799b52f",
+      "baseRoute": "40677054-c402-4c56-a0e4-5dd7d799b52f",
+      "alias": "treatment",
+      "published": true,
+      "shared-routes-class": "treatment",
+      "requiresPatientEnrollment": true,
+      "routes": []
+    },
+    {
+      "programName": "Hemophilia",
+      "programUuid": "a3610ba4-9811-46b3-9628-83ec9310be13",
+      "baseRoute": "a3610ba4-9811-46b3-9628-83ec9310be13",
+      "alias": "treatment",
+      "published": true,
+      "shared-routes-class": "treatment",
+      "requiresPatientEnrollment": true,
+      "routes": []
+    },
+    {
+      "programName": "General Treatment Program",
+      "programUuid": "725b5193-3452-43fc-aca3-6a80432d9bfa",
+      "baseRoute": "725b5193-3452-43fc-aca3-6a80432d9bfa",
+      "alias": "treatment",
+      "published": true,
+      "shared-routes-class": "treatment",
+      "requiresPatientEnrollment": true,
+      "routes": []
+    },
+    {
+      "programName": "OVC",
+      "programUuid": "781d8768-1359-11df-a1f1-0026b9348838",
+      "baseRoute": "781d8768-1359-11df-a1f1-0026b9348838",
+      "alias": "ovc",
+      "published": false,
+      "requiresPatientEnrollment": true,
+      "routes": [
+        {
+          "url": "visit",
+          "label": "Visit",
+          "icon": "icon-i-outpatient"
+        },
+        {
+          "url": "patient-encounters",
+          "label": "Encounters",
+          "icon": "icon-i-immunizations"
+        },
+        {
+          "url": "patient-vitals",
+          "label": "Vitals",
+          "icon": "fa fa-heartbeat"
+        },
+        {
+          "url": "lab-data-summary",
+          "label": "Lab Data Summary",
+          "icon": "icon-i-laboratory"
+        }
+      ]
+    },
+    {
+      "programName": "BSG",
+      "programUuid": "781d8a88-1359-11df-a1f1-0026b9348838",
+      "baseRoute": "781d8a88-1359-11df-a1f1-0026b9348838",
+      "alias": "bsg",
+      "published": false,
+      "requiresPatientEnrollment": true,
+      "routes": [
+        {
+          "url": "visit",
+          "label": "Visit",
+          "icon": "icon-i-outpatient"
+        },
+        {
+          "url": "patient-encounters",
+          "label": "Encounters",
+          "icon": "icon-i-immunizations"
+        },
+        {
+          "url": "patient-vitals",
+          "label": "Vitals",
+          "icon": "fa fa-heartbeat"
+        },
+        {
+          "url": "lab-data-summary",
+          "label": "Lab Data Summary",
+          "icon": "icon-i-laboratory"
+        }
+      ]
+    },
+    {
+      "programName": "Dermatology",
+      "programUuid": "b3575274-1850-429b-bb8f-2ff83faedbaf",
+      "baseRoute": "b3575274-1850-429b-bb8f-2ff83faedbaf",
+      "alias": "dermatology",
+      "published": true,
+      "requiresPatientEnrollment": true,
+      "routes": [
+        {
+          "url": "visit",
+          "label": "Visit",
+          "icon": "icon-i-outpatient"
+        },
+        {
+          "url": "patient-encounters",
+          "label": "Encounters",
+          "icon": "icon-i-immunizations"
+        },
+        {
+          "url": "patient-vitals",
+          "label": "Vitals",
+          "icon": "fa fa-heartbeat"
+        },
+        {
+          "url": "lab-data-summary",
+          "label": "Lab Data Summary",
+          "icon": "icon-i-laboratory"
+        },
+        {
+          "url": "patient-imaging",
+          "label": "Imaging",
+          "icon": "icon-i-radiology"
+        }
+      ]
+    },
+    {
+      "programName": "Integrated Screening",
+      "programUuid": "da0c184e-751c-4b7e-a761-a60dc2d3f798",
+      "baseRoute": "da0c184e-751c-4b7e-a761-a60dc2d3f798",
+      "alias": "cdm",
+      "published": true,
+      "shared-routes-class": "cdm",
+      "requiresPatientEnrollment": true,
+      "routes": []
+    },
+    {
+      "programName": "BIGPIC",
+      "programUuid": "f5cbf61f-eadc-4fe6-999c-2dfe9556df95",
+      "baseRoute": "f5cbf61f-eadc-4fe6-999c-2dfe9556df95",
+      "alias": "cdm",
+      "published": true,
+      "shared-routes-class": "cdm",
+      "requiresPatientEnrollment": true,
+      "routes": []
+    },
+    {
+      "programName": "EICI Screening and Diagnosis",
+      "programUuid": "37ff4124-91fd-49e6-8261-057ccfb4fcd0",
+      "baseRoute": "37ff4124-91fd-49e6-8261-057ccfb4fcd0",
+      "alias": "screening",
+      "published": true,
+      "shared-routes-class": "screening",
+      "requiresPatientEnrollment": true,
+      "routes": []
+    },
+    {
+      "programName": "EICI iThemba Program ",
+      "programUuid": "f6b6a16e-f2cb-4e4c-88b3-4836c33954f7",
+      "baseRoute": "f6b6a16e-f2cb-4e4c-88b3-4836c33954f7",
+      "alias": "screening",
+      "published": true,
+      "shared-routes-class": "screening",
+      "requiresPatientEnrollment": true,
+      "routes": [
+        {
+          "url": "lab-data-summary",
+          "label": "Lab Data Summary",
+          "icon": "icon-i-laboratory"
+        }
+      ]
+    },
+    {
+      "programName": "EICI Control Program ",
+      "programUuid": "4c925c80-d282-437d-84cc-f3be134a61c4",
+      "baseRoute": "4c925c80-d282-437d-84cc-f3be134a61c4",
+      "alias": "screening",
+      "published": true,
+      "shared-routes-class": "screening",
+      "requiresPatientEnrollment": true,
+      "routes": []
+    }
+  ],
+  "sharedRoutes": {
+    "treatment": [
+      {
+        "url": "visit",
+        "label": "Visit",
+        "icon": "icon-i-outpatient"
+      },
+      {
+        "url": "patient-encounters",
+        "label": "Encounters",
+        "icon": "icon-i-immunizations"
+      },
+      {
+        "url": "patient-vitals",
+        "label": "Vitals",
+        "icon": "fa fa-heartbeat"
+      },
+      {
+        "url": "oncology-summary",
+        "label": "Oncology Summary",
+        "icon": "fa fa-medkit"
+      },
+      {
+        "url": "lab-data-summary",
+        "label": "Lab Data Summary",
+        "icon": "icon-i-laboratory"
+      },
+      {
+        "url": "lab-orders",
+        "label": "Lab Orders",
+        "icon": "icon-i-pathology"
+      },
+      {
+        "url": "drug-orders",
+        "label": "Drug Orders",
+        "icon": "icon-i-pharmacy"
+      },
+      {
+        "url": "orders",
+        "label": "Order Reports",
+        "icon": "icon-i-immunizations"
+      },
+      {
+        "url": "patient-imaging",
+        "label": "Imaging",
+        "icon": "icon-i-radiology"
+      },
+      {
+        "url": "program-manager",
+        "label": "Program Manager",
+        "icon": "icon-i-administration"
+      }
+    ],
+    "screening": [
+      {
+        "url": "visit",
+        "label": "Visit",
+        "icon": "icon-i-outpatient"
+      },
+      {
+        "url": "patient-encounters",
+        "label": "Encounters",
+        "icon": "icon-i-immunizations"
+      },
+      {
+        "url": "patient-vitals",
+        "label": "Vitals",
+        "icon": "fa fa-heartbeat"
+      },
+      {
+        "url": "lab-data-summary",
+        "label": "Lab Data Summary",
+        "icon": "icon-i-laboratory"
+      },
+      {
+        "url": "lab-orders",
+        "label": "Lab Orders",
+        "icon": "icon-i-pathology"
+      },
+      {
+        "url": "patient-imaging",
+        "label": "Imaging",
+        "icon": "icon-i-radiology"
+      },
+      {
+        "url": "program-manager",
+        "label": "Program Manager",
+        "icon": "icon-i-administration"
+      }
+    ],
+    "research": [
+      {
+        "url": "visit",
+        "label": "Visit",
+        "icon": "icon-i-outpatient"
+      },
+      {
+        "url": "patient-encounters",
+        "label": "Encounters",
+        "icon": "icon-i-immunizations"
+      },
+      {
+        "url": "patient-vitals",
+        "label": "Vitals",
+        "icon": "fa fa-heartbeat"
+      },
+      {
+        "url": "lab-data-summary",
+        "label": "Lab Data Summary",
+        "icon": "icon-i-laboratory"
+      },
+      {
+        "url": "lab-orders",
+        "label": "Lab Orders",
+        "icon": "icon-i-pathology"
+      },
+      {
+        "url": "orders",
+        "label": "Order Reports",
+        "icon": "icon-i-immunizations"
+      },
+      {
+        "url": "patient-imaging",
+        "label": "Imaging",
+        "icon": "icon-i-radiology"
+      }
+    ]
+  }
+}

@@ -1,0 +1,77 @@
+<div class="box-body">
+  <div class="component-wrapper">
+    <busy [message]="'Loading patient dashboard...'" *ngIf="isLoading"></busy>
+    <div class="animate-show">
+      <h3 class="text-primary"><span class="fa fa-cog fa-spin fa-1x fa-fw"></span> User Default
+        Properties</h3>
+      <hr />
+      <div class="suggest-container form-group">
+        <div class="panel panel-default">
+          <div class="panel-heading ">
+            <label for="location">Select a Location</label> 
+            <!-- <span class="pull-right"><i class="glyphicon glyphicon-search" (click)="locationRadioButton = false"></i>Search</span></div> -->
+          </div>
+          <div class="panel-body">
+            <div class="input-group">
+              <div class="input-group-addon"><span class="glyphicon glyphicon-map-marker"></span></div>
+              <ng-select class="sharp-corners" placeholder="Please type to search" id="location" [(ngModel)]="location"
+                [items]="locations" (change)="selectLocation($event, false)"></ng-select>
+              <div *ngIf="isBusy" class="input-group-addon"><i class="fa fa-spinner fa-spin"></i></div>
+            </div>
+            <!-- <div class="row" *ngIf="locationRadioButton">
+              <mat-radio-group class="vertical-radio-group" [(ngModel)]="location"  (ngModelChange)="selectLocation
+              ($event, true)">
+                <mat-radio-button class="vertical-radio-button" name="" *ngFor="let location of locations;"
+                  [value]="location" color="primary">
+                  {{location?.label}}
+                </mat-radio-button>
+              </mat-radio-group>
+              <div *ngIf="isBusy" class="input-group-addon"><i class="fa fa-spinner fa-spin"></i></div>
+            </div> -->
+          </div>
+        </div>
+        <div class="float pull-left">
+          <p *ngIf="!currentLocation" class="form-text text-danger"><em>Please select location to continue</em></p>
+          <p *ngIf="currentLocation" class="form-text text-bold">Your current location : <span class="current-location">{{currentLocation?.display}}</span></p>
+        </div>
+        <div class="float pull-right">
+          <span class="text-bold" *ngIf="location && !confirming">New Location: {{location?.label}}</span>
+        </div>
+        <div class="clear clearfix">&nbsp;</div>
+        <ul class="suggestions list-group">
+          <li *ngFor="let item of filteredList; let i = index;" (click)="select(item)" class="list-group-item">
+            {{item?.display}}
+          </li>
+        </ul>
+        <div class="clear clearfix">&nbsp;</div>
+      </div>
+      <!-- Select  service-->
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title"><label for="medicalService">Select an  <i>e</i>-ICI Service</label><br /></h3>
+        </div>
+        <div class="panel-body">
+          <div class="form-group" style="margin-top: -20px;">
+            <div class="row">
+            <mat-radio-group class="vertical-radio-group" [ngModel]="selectedService" (ngModelChange)="selectMedicalService($event)">
+              <mat-radio-button class="vertical-radio-button" name="" *ngFor="let service of medicalServices;"
+                [value]="service.itemName" color="primary">
+                {{ service?.itemName }}
+              </mat-radio-button>
+            </mat-radio-group>
+            </div>
+          </div>
+          <div class="clear">&nbsp;</div>
+        </div>
+      </div>
+    </div>
+    <!--<retrospective-data-entry-settings></retrospective-data-entry-settings>-->
+    <div style="margin-top: -15px;">
+      <button [disabled]="disable" class="btn btn-info2 previous"
+        (click)="goToPatientSearch()">Done
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <i *ngIf="isLoading" class="fa fa-spinner fa-spin fa-1x fa-fw"></i>
+      </button>
+    </div>
+  </div>
+</div>
